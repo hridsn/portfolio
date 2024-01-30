@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hridya's Portfolio - Feedloc</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/swup@4"></script>
+    <script>
+        const swup = new Swup();
+    </script>
+</head>
+
+<body>
+    <div id="swup" class="feedloc transition-fade">
+        <a href="index.html#projects" class="anchor-button">
+            <i class="fa-solid fa-chevron-left"></i>
+        </a>
+        <div class="hero feedloc">
+            <div></div>
+            <div style="width: 25vw;">
+                <h1>FeedLoc</h1>
+                An app that enables connectivity between restaurants and the hunger spots between their localities.
+            </div>
+        </div>
+        <div style="background: #FF6542;" class="conclusion py-5">
+            <h2 class="pb-3">High-Fidelity Wire frames</h2>
+            To view the high fidelity prototype of this application please follow <a
+                href="https://www.figma.com/proto/dIC6aYVM3D64HyXknuDY5R/Feedloc?node-id=305%3A236&scaling=contain&page-id=0%3A1&starting-point-node-id=293%3A247"
+                target="_blank">this link</a>.
+        </div>
+        <div class="info py-5">
+            <h2 class="pb-3">Research</h2>
+            <div class="row">
+                <div class="col-6">
+                    <h4>Primary Research</h4>
+                    <div>
+                        The primary research process involved interviews with
+                        <ul>
+                            <li>Local restaurant</li>
+                            <li>2 star restaurant</li>
+                            <li>Catering Service</li>
+                            <li>Bakery</li>
+                            <li>Food donation NGO</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h4>Findings</h4>
+                    <div>
+                        <ul>
+                            <li>Raw food items waste more</li>
+                            <li>Waste management techniques followed
+                                <ul>
+                                    <li>Decomposition plants</li>
+                                    <li>Feed at poultry farms</li>
+                                    <li>Employees take home extra whole meals</li>
+                                </ul>
+                            </li>
+                            <li>Only one business actively contacted an NGO</li>
+                            <li>Businesses purchase fewer ingredients because of the pandemic</li>
+                            <li>NGOs usually target one hunger spot at once</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap conclusion py-5">
+            <h2 class="col-12 pb-3">Challenges</h2>
+            <div class="col-6">
+                <h4>Restaurants</h4>
+                <ul>
+                    <li>Awareness about different methods is lacking</li>
+                    <li>The effort to contact NGOs is a lot compared to other remedies</li>
+                    <li>Time of collection is essential - restaurants usually supply spoilt food </li>
+                    <li>Keep track of food about to expire </li>
+                    <li>Investing in a proper way to store food items for donations</li>
+                    <li>Estimation of the amount of food to give away</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <h4>NGOs</h4>
+                <ul>
+                    <li>Difficult to calculate food required for multiple targeted spots</li>
+                    <li>Manage different restaurant collections to supply to numerous spots</li>
+                    <li>Make use of raw items from restaurants</li>
+                    <li>Manage amount of trips required to collect all the items</li>
+                    <li>Storage of items/food overnight</li>
+                    <li>Arranging items to be given to different hunger spots</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info py-5">
+            <h2 class="pb-3">Secondary Research</h2>
+            <div>
+                JOURNAL AND NEWSPAPER ARTICLES
+                <ul>
+                    <li>Sakaguchi, L., Pak, N., & Potts, M. D. (2018). Tackling the issue of food waste in restaurants:
+                        Options for measurement method, reduction and behavioral change. Journal of Cleaner Production,
+                        180,
+                        430-436. <a
+                            href="https://doi.org/10.1016/j.jclepro.2017.12.136">https://doi.org/10.1016/j.jclepro.2017.12.136</a>
+                    <li>Bharucha, J. (2018). Tackling the challenges of reducing and managing food waste in Mumbai
+                        restaurants. British Food Journal, 120(3), 639-649.
+                        <a href="https://doi.org/10.1108/bfj-06-2017-0324">https://doi.org/10.1108/bfj-06-2017-0324</a>
+                    <li>Times, T. R. (2019, May 31). 5 Stellar Restaurant Food Waste Management Techniques. The
+                        Restaurant
+                        Times. <a
+                            href="https://www.posist.com/restaurant-times/restro-gyaan/5-easy-ways-reduce-food-wastage-restaurants.html">
+                            https://www.posist.com/restaurant-times/restro-gyaan/5-easy-ways-reduce-food-wastage-restaurants.html</a>
+                    <li>Ananth, M. K. (2016, April 12). App to identify hunger spots. The Hindu.
+                        <a
+                            href="https://www.thehindu.com/news/cities/Coimbatore/app-to-identify-hunger-spots/article8463505.ece">
+                            https://www.thehindu.com/news/cities/Coimbatore/app-to-identify-hunger-spots/article8463505.ece</a>
+                    <li>Barua, A. (2020, March 11). Leftovers To Donations: 3 Unique Ways Indian Restaurants Are Cutting
+                        Food Waste. The Better India. <a
+                            href="https://www.thebetterindia.com/219210/india-restaurants-food-waste-fight-hunger-leftovers-donation-collection-ana79/">
+                            https://www.thebetterindia.com/219210/india-restaurants-food-waste-fight-hunger-leftovers-donation-collection-ana79/</a>
+                </ul>
+            </div>
+        </div>
+        <div class="conclusion py-5">
+            <h2 class="pb-3">Findings</h2>
+            <div>
+                <ul>
+                    <li>An insight into the amount of food wasted in India</li>
+                    <li>Areas where awareness regarding the topic can be raised</li>
+                    <li>Methods in which pre-existing studies attempt tackle the food waste situation</li>
+                    <li>Strategies to use up edible food waste and to hunger spots</li>
+                    <li>How identification of hunger spots works</li>
+                    <li>Pre-existing small scale solutions to redirect edible food to hunger spots</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info py-5">
+            <h2 class="pb-3">Concept Flow</h2>
+            <h4>Restaurants</h4>
+            <div class="flow-chart">
+                <object data="assets/feedloc/concept-flows/restaurant.svg" type="image/svg+xml"></object>
+            </div>
+            <div>
+                <ul>
+                    <li>Restaurants input closing time to know the average time for collection (giving a 3-hour frame
+                        after closing)</li>
+                    <li>Meals to be given are to be added to the inventory manually at the end of each day</li>
+                    <li>Raw items required and to be given are calculated in inventory*
+                        <ul>
+                            <li>Iceboxes for meals and raw items are to be separate</li>
+                        </ul>
+                    </li>
+                    <li>Switch on the “collect button” for food collection (shows collection time/status of collection)
+                        <ul>
+                            <li>Food collected from a single destination should be >20 meals (both meals and with raw
+                                items*)</li>
+                        </ul>
+                    </li>
+                    <li>Verify collection by receiving with NGO representative name, NGO and vehicle number</li>
+                </ul>
+            </div>
+            <div>*Using Recipe Standardisation- <u>calculating the amount of items</u> required according to <u>meal
+                    consumption rates</u> in restaurant using the <u>recipe for one serving</u>.</div>
+        </div>
+        <div class="conclusion py-5">
+            <h4>Inventory - Restaurants</h4>
+            <div>
+                <ul>
+                    <li>Manage record of raw items and meals of the entire stock</li>
+                    <li>Estimate amount to buy and amount leftover with recipe standardisation</li>
+                    <li>Keep tabs on mfd date, date purchased, and expiry date if specified (estimate otherwise)
+                        <ul>
+                            <li>Arrange the inventory having soon expiring items first</li>
+                        </ul>
+                    </li>
+                    <li>Give away things about to expire three to four days before
+                        <ul>
+                            <li>We can estimate how much to freeze from here</li>
+                        </ul>
+                    </li>
+                    <li>Input raw items to be given in a separate section and the number of meals in another</li>
+                    <li>Notifications for ice change/addition recommended once in 2 days</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info py-5">
+            <h4>NGOs</h4>
+            <div class="flow-chart">
+                <object data="assets/feedloc/concept-flows/ngo.svg" type="image/svg+xml"></object>
+            </div>
+            <div>
+                Assuming NGOs have details about hunger spots (population, location, etc.). Few Restaurants and nearby
+                hunger spot(s) make clusters.
+                If there are n clusters, the NGO deploys n collection vehicles for n branches. Looking at one branch:
+                <ul>
+                    <li>They collect the filled iceboxes and provide the restaurants new iceboxes</li>
+                    <li>Store meals and items overnight in iceboxes in collection vehicles</li>
+                    <li>Prepare food in the morning with the raw items collected
+                        <ul>
+                            <li>A branch with extra ingredients gives to another that has less*</li>
+                            <li>Catering services arranged to cook these meals</li>
+                        </ul>
+                    </li>
+                    <li>Supply in the afternoon with a map presented by the system</li>
+                </ul>
+            </div>
+            <div>*Using Recipe Standardisation- <u>calculating the amount of items</u> required according to <u>meal
+                    consumption rates</u> in restaurant using the <u>recipe for one serving</u>.</div>
+        </div>
+        <div class="conclusion py-5">
+            <h4>Inventory - NGOs</h4>
+            <div>
+                <ul>
+                    <li>Adds food from restaurant inventory to NGO branch inventory</li>
+                    <li>Adds the number of meals from raw items using recipe standardisation (clearly shows that it is
+                        an estimate)</li>
+                    <li>Calculates hunger spot(s) requirements with hunger spot details provided</li>
+                    <li>System checks the requirement with the inventory to determine if the branch has excess or lack
+                        of food</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info py-5">
+            <h4>Flow for NGO heads</h4>
+            <div class="flow-chart">
+                <object data="assets/feedloc/concept-flows/ngo_head.svg" type="image/svg+xml"></object>
+            </div>
+            <div>
+                Assuming NGOs have details about hunger spots (population, location, etc.). Few Restaurants and nearby
+                hunger spot(s) make clusters.
+                If there are n clusters, the NGO deploys n collection vehicles for n branches. Looking at one branch:
+                <ul>
+                    <li>Input Hunger Spot details and NGO worker details (excel, csv) before getting started</li>
+                </ul>
+                Collection process
+                <ul>
+                    <li>Enter number of zones to divide the map
+                        <ul>
+                            <li>This divides the NGO helpers into that many branches</li>
+                        </ul>
+                    </li>
+                    <li>Send map with hunger spot details</li>
+                    <li>Restaurant details add automatically as they mark up for collection</li>
+                    <li>Catering services informed about the amount of food to be madeThey collect the filled iceboxes
+                        and provide the restaurants new iceboxes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="conclusion py-5">
+            <h4>Clustering</h4>
+            <ul>
+                <li>Calculate food requirement of a hunger spot with its population details provided</li>
+                <li>Put hunger spot(s) and restaurants in a cluster on the basis of restaurant mark up and amount of
+                    food they will give
+                    <ul>
+                        <li>Meals collected can be ±50 than the required amount</li>
+                        <li>If mark up is between collection, closest branch is notified for collection</li>
+                    </ul>
+                </li>
+                <li>Each cluster is assigned to an NGO branch</li>
+                <li>Vehicles required can vary on collection amount</li>
+                <li>Map details are sent to the people assigned to the branches
+                    <ul>
+                        <li>They can also be shared as pdf/google maps</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="info py-5">
+            <h2 class="pb-3">User Flow</h2>
+            <div>
+                <h4>Sign Up/Log In</h4>
+                <div class="user-flow">
+                    <object data="assets/feedloc/user-flows/signup.svg" type="image/svg+xml"></object>
+                </div>
+            </div>
+            <div>
+                <h3>Restaurants</h3>
+                <div>
+                    <h4>Restaurant Accounts</h4>
+                    <div class="user-flow">
+                        <object data="assets/feedloc/user-flows/restaurant_accounts.svg" type="image/svg+xml"></object>
+                    </div>
+                </div>
+                <div>
+                    <h4>Collection - Restaurants</h4>
+                    <div class="user-flow">
+                        <object data="assets/feedloc/user-flows/restaurant_collections.svg"
+                            type="image/svg+xml"></object>
+                    </div>
+                </div>
+                <div>
+                    <h4>Inventory Management</h4>
+                    <div class="user-flow">
+                        <object data="assets/feedloc/user-flows/inventory_management.svg" type="image/svg+xml"></object>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>NGOs</h3>
+                <h4>NGO Heads' Accounts</h4>
+                <div style="margin: -14vh -25vw -8vh" class="user-flow">
+                    <object data="assets/feedloc/user-flows/ngo_head_accounts.svg" type="image/svg+xml"></object>
+                </div>
+            </div>
+            <div>
+                <h4>Starting a trip</h4>
+                <div class="user-flow">
+                    <object data="assets/feedloc/user-flows/start_trip.svg" type="image/svg+xml"></object>
+                </div>
+            </div>
+            <div>
+                <h4>NGO Workers' Accounts</h4>
+                <div style="margin: -14vh -25vw -8vh" class="user-flow">
+                    <object data="assets/feedloc/user-flows/ngo_worker_accounts.svg" type="image/svg+xml"></object>
+                </div>
+            </div>
+            <div>
+                <h4>Collection - NGOs</h4>
+                <div style="margin: -14vh -25vw -8vh" class="user-flow">
+                    <object data="assets/feedloc/user-flows/ngo_collections.svg" type="image/svg+xml"></object>
+                </div>
+            </div>
+        </div>
+        <div style="background: #FF6542;" class="conclusion py-5">
+            <h2>Low-Fidelity Wire frames</h2>
+        </div>
+        <div class="info py-5">
+            <h4>Sign Up/Log In</h4>
+            <div class="d-flex align-items-center mb-5">
+                <ul>
+                    <li>Welcome screen on opening the app</li>
+                    <li>Sign Up an choose Restaurant or NGO</li>
+                    <li>Log In if information already exists</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/signup/login.png" alt="Log in and sign up">
+            </div>
+            <div class="d-flex align-items-center mb-5">
+                <ul>
+                    <li>Sign Up fields for restaurants and NGOs are different</li>
+                    <li>Condensing all the details to be input to the most important for proper collection for
+                        restaurants and identification for NGOs</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/signup/signup.png" alt="Sign up form for restaurant and NGO">
+            </div>
+        </div>
+        <div class="conclusion py-5">
+            <h3>Restaurants</h3>
+        </div>
+        <div class="info py-5">
+            <h4>Home Page</h4>
+            <div class="d-flex align-items-center">
+                <div>
+                    <ul>
+                        <li>Introductory home page asks required details</li>
+                        <li>Contact NGO to get ice boxes and be eligible for collection</li>
+                    </ul>
+                    <ul>
+                        <li>Regular home page shows countdown to collection and ice change</li>
+                        <li>Meals donated are kept check</li>
+                        <li>Items expiring soon are displayed on the home page in categories</li>
+                    </ul>
+                </div>
+                <img src="assets/feedloc/wireframes/restaurants/home.png" alt="Home page">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Collection Drives</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Different notifications regarding collections and ice change</li>
+                    <li>Shows countdown to collection</li>
+                    <li>Only mark up for collection after ice change and meals>50</li>
+                    <li>View map to see route and track location of NGO vehicle </li>
+                    <li>View vehicle details</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/restaurants/collection_drives.png"
+                    alt="Various notifications when a collection drive commences">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>View Map</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Once the NGO finalises the trip, the restaurants can view the route they will be taking </li>
+                    <li>The restaurants can also talk directly to the branch </li>
+                    <li>They can plan their day according to the information given here</li>
+                    <li>Once the NGO updates vehicle information, they get info about that too</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/restaurants/map.png" alt="Map showing NGO's collection drive route">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Inventory</h4>
+
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>View in stock items and keep track on items going bad, running out etc. </li>
+                    <li>Recipe standardisation gives close estimate of amount of the item required between collections
+                    </li>
+                    <li>Choose to donate amount of certain food items</li>
+                    <li>Update pre-existing item amounts</li>
+                    <li>Add new item</li>
+                    <li>Search for any required items</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/restaurants/inventory.png" alt="Inventory">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Inventory - Donated</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Shows list of various items and meals that have marked for donation and kept in ice box</li>
+                    <li>Shows the percentage status of in ice box</li>
+                    <li>Update quantities of pre-existing items on the list</li>
+                    <li>Search for any items if required</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/restaurants/donated.png"
+                    alt="List of items to be donated at collection drive">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Menu and Notifications</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Notification panel shows various important notifications regarding collection and food</li>
+                    <li>Menu gives access to small utilities to help with the overall management of the app</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/restaurants/menu_notifications.png" alt="Menu and notifications">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Other Utilities</h4>
+            <div class="d-inline-flex flex-column" style="width: fit-content">
+                <img src="assets/feedloc/wireframes/restaurants/edit_account.png" class="m-0 object-fit-contain"
+                    alt="Edit account details">
+                Edit account details
+            </div>
+            <div class="d-inline-flex flex-column mx-5 text-center" style="width: 360px">
+                <img src="assets/feedloc/wireframes/restaurants/prev_collections.png" class="m-0 object-fit-contain"
+                    alt="Previous collection drive status">
+                View previous collections and view summary reports of each
+            </div>
+            <div class="d-inline-flex flex-column mx-5 text-center" style="width: 360px">
+                <img src="assets/feedloc/wireframes/restaurants/contact_ngo.png" class="m-0 object-fit-contain"
+                    alt="Contact NGO during collection drive">
+                Contact your NGO regarding any queries via phone or text during the collection drive
+            </div>
+        </div>
+        <div class="conclusion py-5">
+            <h2>NGOs</h2>
+        </div>
+        <div class="info py-5">
+            <h4>Home Page</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Introductory home page asks required details from NGO head</li>
+                    <br>
+                    <li>Home page shows option to start a new trip with the team</li>
+                    <li>Stats from previous trip are shown if any exist</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/head_home.png" alt="NGO Home page">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Hunger Spot List</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>After adding hunger spots with file upload, you can view hunger spot detail in the menu</li>
+                    <li>You can also add new hunger spot place to your database</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/hunger_spot_list.png" alt="Hunger Spot List">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Hunger Spot - Delivery and Edit</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Edit details about pre-existing hunger spots</li>
+                    <li>View details about previous trip to the hunger spot</li>
+                    <li>Delete hunger spot if required</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/hunger_spot_delivery.png" alt="Edit and Hunger Spot delivery">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Worker's Details</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Shows details about every worker at the NGO after the file upload</li>
+                    <li>Details can only be edited from the worker's accounts</li>
+                    <li>View contact number of workers</li>
+                    <br>
+                    <li>When a new member joins, the head's get a notification to approve them</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/worker_details.png" alt="">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Worker's Home Page</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>New members are asked to complete their profile</li>
+                    <li>Regular members who have been on a trip get stats about their previous trip</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/worker_home.png" alt="">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Start with a trip</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>After the heads have input all the required details, they can start a trip</li>
+                    <li>Option to start trip is on the home page of the heads</li>
+                    <li>The heads can also view stats from their previous trip</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/start_trip.png" alt="">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Hunger Spots and Zones</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>First step is to select hunger spots to serve </li>
+                    <li>Second step asks the NGO head to input the number of teams they wish to deploy, and time of
+                        collection and delivery</li>
+                    <li>This divides the map into that mumber of zones</li>
+                    <li>Restaurants are automatically assigned to these zone teams when they mark up</li>
+                    <li>As there are a lot of restaurants in a specific area, NGOs can conduct drives at a higher
+                        frequency than restaurant collections</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/hunger_spots.png" alt="">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Maps</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>After setting up the drive, the workers can view
+                        <ul>
+                            <li>Route</li>
+                            <li>Collection countdown</li>
+                            <li>List of restaurants donating</li>
+                            <li>Total meals collected</li>
+                            <li>Team members</li>
+                        </ul>
+                    </li>
+                    <li>Workers have the option of opting out of drives</li>
+                    <li>Heads have option to cancel drive as well</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/map.png" alt="">
+            </div>
+        </div>
+        <div class="conclusion py-5">
+            <h2>Collection and Delivery</h2>
+        </div>
+        <div class="info py-5">
+            <h4>Home Page</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>After starting the trip, home page will be the same for all workers</li>
+                    <li>The system makes an estimate of items required from viewing previous trips under the NGO
+                        <ul>
+                            <li>If the NGO is new, the system waits until there are at least 3-4 restaurants donating to
+                                study trends and recommend items required</li>
+                        </ul>
+                    </li>
+                    <li>Collection details are displayed on the top with the number of meals donated</li>
+                    <li>Map and other collection details are also provided</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/home_after_trip_start.png" alt="">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Inventory</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Workers can view items required to complete meals with raw items donated </li>
+                    <li>Update quantity of items required once purchased</li>
+                    <li>Items needed are different for each branch and will have to be updated by the branch themselves
+                    </li>
+                    <li>Real time view of items being donated by restaurants</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/inventory.png" alt="">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>View Map</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>After collection, workers get delivery countdown and if there are/need extra meals</li>
+                    <li>Use the system to notify for meals</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/map_during_trip.png" alt="">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Menus and Notifications</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Notifications panel shows the
+                        <ul>
+                            <li>restaurants marked up</li>
+                            <li>branches notifying for less/more food</li>
+                            <li>collection drive notifications</li>
+                        </ul>
+                    </li>
+                    <li>Through the menus, the workers can view previous stats</li>
+                    <li>NGO heads can alo manage worker and hunger spot details, and edit NGO details</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/menu_notifications.png" alt="">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Previous Drives</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>Shows all previous hunger spots visited</li>
+                    <li>Shows stats about meals, date, and address</li>
+                    <li>Shows list of team members, and restaurants that contributed to the drive</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/previous_drives.png" alt="">
+            </div>
+        </div>
+        <div class="info pb-5">
+            <h4>Contact Restaurants</h4>
+            <div class="d-flex align-items-center">
+                <ul>
+                    <li>View details regarding restaurants in the particular collection drive</li>
+                    <li>View meals donated and details of items and meals donated</li>
+                    <li>Contact the restaurant from here</li>
+                </ul>
+                <img src="assets/feedloc/wireframes/ngos/contact_restaurant.png" alt="">
+            </div>
+        </div>
+        <div style="background: #edd7b4;" class="conclusion py-5 d-flex justify-content-center">
+            <a href="index.html#projects" class="anchor-button position-relative rounded-pill start-0 top-0 w-25">
+                Go back to projects
+            </a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
