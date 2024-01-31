@@ -249,7 +249,7 @@ html.is-rendering .transition-fade {
   height: 40vh;
   margin-left: 30px;
 }
-.feedloc .info ul {
+.feedloc .info.low-fidelity ul {
   width: 25vw;
 }
 .feedloc .conclusion {
@@ -269,6 +269,7 @@ html.is-rendering .transition-fade {
 .tedx a {
   background: #ff4242;
   color: #FFF;
+  border: 2px solid #FFF;
 }
 .tedx video, .tedx img {
   width: 36vw;
@@ -292,6 +293,7 @@ html.is-rendering .transition-fade {
 }
 .zen a {
   background: #615A95;
+  border: 2px solid #FFF;
   color: #FFF;
 }
 .zen img {
@@ -308,6 +310,7 @@ html.is-rendering .transition-fade {
 .almora a {
   background: rgb(181, 102, 90);
   color: #FFF;
+  border: 2px solid #FFF;
 }
 
 .train-your-brain {
@@ -317,6 +320,9 @@ html.is-rendering .transition-fade {
   color: #71BF5E;
 }
 .train-your-brain a {
+  color: #000;
+}
+.train-your-brain .anchor-button {
   background: #71BF5E;
   border: 2px solid white;
   color: #000;
