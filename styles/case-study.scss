@@ -1,0 +1,463 @@
+// Shared mixins & placeholders
+@use 'mixins' as *;
+
+// Configurable variables for case studies
+$highlight-color: #AB464C !default;
+$bg-highlight: #faebee !default;
+$bg-cream: #ebdac9 !default;
+$bg-white: #fcf6eb !default;
+$torn-paper-cream: url(../assets/mcssp/torn_paper_cream.png) !default;
+$torn-paper-highlight: url(../assets/mcssp/torn_paper_highlight.png) !default;
+$torn-paper-white: url(../assets/mcssp/torn_paper_white.png) !default;
+
+.action-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    background: $highlight-color;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+    width: fit-content;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+h1 {
+    font-size: 3.25rem;
+    margin-bottom: 1.75rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+h3, p.large {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+p.medium {
+    font-size: 1.125rem;
+}
+
+h6, .small {
+    font-size: 0.825rem; 
+}
+
+p.medium, p.large {
+    margin: 1rem 0;
+}
+
+h2, h4, h5, .highlight-color {
+    color: $highlight-color;
+}
+
+.small-margin {
+    margin: 0.25rem 0 !important;
+}
+
+.project-hero img, .case-study img {
+    border-radius: 0.5rem;
+    border: 10px white solid;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+
+    &.rotate {
+        transform: rotate(-3deg);
+    }
+
+    &.no-border {
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
+.project-hero-container,
+.meta-section,
+.case-study .section-container {
+    @include centered-page-content;
+    width: 100%;
+}
+
+.project-hero-container {
+    padding: 5rem 0rem;
+}
+
+.project-hero {
+    background: url(../assets/background-patterns/rice-paper-2.png) repeat, $highlight-color;
+    position: relative;
+
+    .project-hero-picture {
+        position: absolute;
+        z-index: 1;
+        width: 45vw;
+        max-width: 41rem;
+    }
+
+    .title {
+        display: flex;
+        justify-content: end;
+        color: white;
+        padding: 3rem 0 3rem;
+
+        .title-container {
+            width: 50%;
+            padding-left: 7rem;
+        }
+    }
+}
+
+.meta {
+    @include torn-paper-background($bg-highlight, $torn-paper-highlight);
+    padding-bottom: 4rem;
+
+    .meta-section {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        padding: 2rem 0 28rem;
+    }
+
+    .meta-container {
+        width: 50%;
+        padding-left: 7rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.case-study {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -8.75rem;
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 32rem;
+        margin-top: -26rem;
+
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+
+            // If the section container has an image or video
+            &:has(img) {
+                > div:has(img) {
+                    flex: 1 1 40%;
+                    max-width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    
+                    img {
+                        max-width: 100%;
+                        max-height: 22rem;
+                        display: block;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+
+            > div:not(:has(img)) {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                max-width: 56%;
+                flex: 0 1 56%;
+            }
+
+            &:has(video) p.small {
+                text-align: center;
+            }
+
+            &.bigger-image {
+                gap: 3rem;
+
+                > div:not(:has(img)) {
+                    flex: 0 1 42%;
+                    max-width: 42%;
+                }
+
+                > div:has(img) {
+                    flex: 0 1 58%;
+                    max-width: 58%;
+
+                    img {
+                        max-height: unset;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+        }
+
+        .numbered {
+            .title {
+                display: flex;
+                gap: 1.5rem;
+                align-items: center;
+                margin-bottom: 1.5rem;
+
+                span {
+                    font-size: 4rem;
+                    color: $highlight-color;
+                }
+
+                h3 {
+                    font-weight: inherit;
+                }
+            }
+            
+            .description {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        .highlight {
+            min-height: 22rem;
+            align-items: center;
+
+            > div.text {
+                max-width: 30%;
+                flex: 0 1 30%;
+            }
+
+            > div:has(img) {
+                flex: 1 1 65% !important;
+                max-width: 65% !important;
+
+
+                img {
+                    max-height: 100% !important;
+                }
+            }
+        }
+
+        .stacked-highlight {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-top: 2rem;
+            gap: 2.5rem;
+            padding-right: 1rem;
+
+            > div:not(:has(img)):not(:has(video)) {
+                max-width: 25%;
+                flex: 0 1 25%;
+
+                .text-container {
+                    height: 90vh;
+
+                    .text{
+                        position: sticky !important;
+                        align-self: flex-start;
+                        top: 25%;
+                        height: 20.5rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    
+                        .title {
+                            margin-bottom: 1.5rem;
+                        }
+
+                        .description {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5rem;
+
+                            > div {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 0.25rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            > div:has(img), > div:has(video) {
+                flex: 1 1 82% !important;
+                max-width: 82% !important;
+                position: sticky !important;
+                top: 20%;
+                align-self: flex-start;
+            }
+
+            video, img {
+                width: 100%;
+                max-height: unset !important;
+                margin-bottom: 0 !important;
+                display: block;
+                transition: opacity 0.8s ease;
+                position: relative;
+
+                &:not(:first-child) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                @for $i from 1 through 10 {
+                    &:nth-child(#{$i}) {
+                        z-index: 10 - $i;
+                    }
+                }
+
+                &.active {
+                    opacity: 1;
+                    z-index: 20;
+                }
+            }
+
+            .video-btn-wrapper {
+                opacity: 0;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                transition: opacity 0.3s ease;
+                background-color: rgb(0, 0, 0, 0.6);
+                border-radius: 0.5rem;
+                position: absolute !important;
+                top: 0;
+                z-index: 50 !important;
+                height: 100%;
+                width: 100%;
+            }
+
+            .image-wrapper {
+                position: relative;
+                width: 100%;
+                height: fit-content;
+
+                .image-btn-wrapper {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    gap: 1rem;
+                    padding: 0.5rem;
+                    z-index: 30;
+                }
+            }
+        }
+    }
+
+    .section:nth-child(odd) {
+        @include torn-paper-background($bg-cream, $torn-paper-cream);
+    }
+
+    .section:nth-child(even) {
+        @include torn-paper-background($bg-highlight, $torn-paper-highlight);
+    }
+
+    .big-section:nth-of-type(odd) {
+        .section:nth-child(odd) {
+            @include torn-paper-background($bg-white, $torn-paper-white);
+        }
+
+        .section:nth-child(even) {
+            @include torn-paper-background($bg-cream, $torn-paper-cream);
+        }
+    }
+
+    .big-section:nth-of-type(even) {
+        .section:nth-child(odd) {
+            @include torn-paper-background($bg-highlight, $torn-paper-highlight);
+        }
+
+        .section:nth-child(even) {
+            @include torn-paper-background($bg-white, $torn-paper-white);
+        }
+    }
+
+    // Scroll-reveal fade-in effect
+    .section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+        &.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .section-container,
+    .stacked-highlight .text {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+        h1, h2, h3, h4, h5, p, ul, ol, img, .action-btn {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 
+                opacity 0.5s ease-out var(--delay, 0ms), 
+                transform 0.5s ease-out var(--delay, 0ms), 
+                color 0.2s ease-out calc(var(--delay, 0ms) + 500ms);
+        }
+
+        p.medium, p.large {
+            color: #1a1a1a;
+        }
+        
+        &.revealed {
+            opacity: 1;
+            transform: translateY(0);
+
+            h1, h2, h3, h4, h5, p, ul, ol, img, .action-btn {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            p.medium, p.large {
+                &:not(.not-highlight) {
+                    color: $highlight-color;
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-study .section-container,
+    .stacked-highlight .text,
+    p.large,
+    p.medium {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}

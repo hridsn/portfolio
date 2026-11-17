@@ -1,0 +1,94 @@
+// Shared mixins & placeholders
+@use '../styles/mixins' as *;
+
+// Common case study layout and typography
+@use '../styles/case-study' with (
+    $highlight-color: #AB464C,
+    $bg-highlight: #faebee,
+    $bg-cream: #ebdac9,
+    $bg-white: #fcf6eb,
+    $torn-paper-cream: url(../assets/mcssp/torn_paper_cream.png),
+    $torn-paper-highlight: url(../assets/mcssp/torn_paper_pink.png),
+    $torn-paper-white: url(../assets/mcssp/torn_paper_white.png)
+);
+
+$bg-white: #fcf6eb;
+
+//custom styling for this case study
+
+.w-75 {
+    flex: 0 1 75% !important;
+    max-width: 75% !important;
+}
+
+p.quote {
+    width: 15rem;
+    background: url(../assets/background-patterns/rice-paper-2.png) repeat, $bg-white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    span {
+        text-align: right;
+        display: block;
+        width: 100%;
+    }
+}
+
+.strategic-direction {
+    text-align: center;
+    max-width: 100% !important;
+    flex: auto !important;
+    padding: 1rem 0;
+
+    > div {
+        transform: scale(1.5);
+    }
+}
+
+.section-container.other-pages {
+    flex-wrap: wrap;
+    gap: 2.78rem !important;
+    justify-content: center !important;
+
+    div {
+        flex: 0 1 30% !important;
+
+        img {
+            max-height: 18rem !important;
+        }
+    }
+}
+
+.scope {
+    p.quote {
+        width: 80%;
+        position: unset;
+    }
+
+    div {
+        width: 100%;
+        margin-top: 1.5rem
+    }
+
+    img {
+        display: inline !important;
+        position: relative;
+        height: 230px;
+        z-index: -1;
+
+        &.parade-cynthia-reyna {
+            bottom: 0.25rem;
+            left: 0.5rem
+        }
+
+        &.parade {
+            top: 0.25rem;
+            right: 0.5rem
+        }
+    }
+}

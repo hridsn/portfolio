@@ -1,0 +1,516 @@
+.projects .projects-content .projects-heading h2, .about .about-content .about-heading h2 {
+  color: #672120;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.projects .projects-content .projects-heading h2 span, .about .about-content .about-heading h2 span {
+  color: black;
+}
+
+.hero {
+  position: relative;
+  background: url(assets/background-patterns/rice-paper-2.png) repeat, #bd8853;
+  height: 593.1135531136px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero .bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero .hero-bg-check {
+  position: absolute;
+  top: -12%;
+  left: -10%;
+  width: 94%;
+}
+.hero .hero-bg-green {
+  position: absolute;
+  top: -62%;
+  left: -3%;
+  width: 106%;
+}
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+}
+.hero .hero-content .hero-photo-column {
+  z-index: 1;
+  width: 50%;
+}
+.hero .hero-content .hero-photo-column .heart-top {
+  position: absolute;
+  top: 135.3846153846px;
+  left: 8%;
+  z-index: 10;
+  height: 135.3846153846px;
+  transform: scaleX(-1);
+}
+.hero .hero-content .hero-photo-column .hero-photo {
+  position: relative;
+  height: 440px;
+  margin-left: -135.3846153846px;
+}
+.hero .hero-content .hero-text-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding-top: 3rem;
+  z-index: 1;
+  margin-left: 2%;
+}
+.hero .hero-content .hero-text-column .hero-name-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.hero .hero-content .hero-text-column .hero-name-wrapper .hero-name {
+  width: 70%;
+  min-width: 500px;
+  transform: rotateZ(2deg);
+  margin: 2%;
+}
+.hero .hero-content .hero-text-column .hero-details {
+  padding-left: 3rem;
+}
+.hero .hero-content .hero-text-column .hero-details .hero-description {
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+}
+.hero .hero-content .hero-text-column .hero-details .hero-subtitle {
+  font-size: 1.25rem;
+}
+.hero .hero-content .hero-text-column .hero-details .underline-1 {
+  position: relative;
+  aspect-ratio: 213/35;
+  width: 9rem;
+  top: -3.5rem;
+  left: 8rem;
+}
+.hero .hero-content .hero-text-column .hero-details .underline-2 {
+  position: relative;
+  aspect-ratio: 87/19;
+  width: 6rem;
+  top: -6.5rem;
+  left: 15rem;
+}
+.hero .heart-bottom {
+  position: absolute;
+  bottom: 8%;
+  left: calc(50% - 20rem);
+  z-index: 4;
+  width: 135.3846153846px;
+}
+
+.projects {
+  position: relative;
+  z-index: 3;
+  margin-top: -8rem;
+}
+.projects .projects-content {
+  position: relative;
+  z-index: 3;
+  background-color: #ebe7dc;
+  padding-bottom: 12rem;
+  line-height: 1.5;
+}
+.projects .projects-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/background-patterns/sandpaper.png");
+  background-repeat: repeat;
+  filter: contrast(1.2) brightness(1.05);
+  z-index: 0;
+}
+.projects .projects-content > * {
+  position: relative;
+  z-index: 1;
+}
+.projects .projects-content .projects-content-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.projects .projects-content .projects-heading {
+  position: relative;
+  padding: 2.7rem 6.5rem;
+  background: url("assets/home-assets/projects/what_ive_built.png") no-repeat;
+  background-size: contain;
+  margin-left: 1rem;
+}
+.projects .projects-content .project-tile {
+  display: flex;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 5rem auto 0 auto;
+  padding-bottom: 2rem;
+  text-decoration: none;
+  color: inherit;
+}
+.projects .projects-content .project-tile .project-picture {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.projects .projects-content .project-tile .project-picture .frame {
+  position: absolute;
+  z-index: 1;
+}
+.projects .projects-content .project-tile .project-picture .deco-img {
+  position: absolute;
+  z-index: 2;
+}
+.projects .projects-content .project-tile .project-picture .main-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 618px;
+  height: 476px;
+  -o-object-position: top;
+     object-position: top;
+  position: relative;
+  z-index: 0;
+}
+.projects .projects-content .project-tile .project-info {
+  position: relative;
+  margin-right: 5rem;
+}
+.projects .projects-content .project-tile .project-text {
+  position: relative;
+}
+.projects .projects-content .project-tile .project-text p {
+  position: relative;
+  z-index: 1;
+}
+.projects .projects-content .project-tile .project-text {
+  font-size: 2.25rem;
+  color: white;
+}
+.projects .projects-content .project-tile .project-text .text-bg-container {
+  position: absolute;
+  z-index: -1;
+}
+.projects .projects-content .project-tile .project-text p {
+  width: 30rem;
+}
+.projects .projects-content .project-tile .project-description {
+  position: relative;
+}
+.projects .projects-content .project-tile .project-description p {
+  position: relative;
+  z-index: 1;
+}
+.projects .projects-content .project-tile .project-description {
+  font-size: 1.5rem;
+}
+.projects .projects-content .project-tile .project-description .desc-bg-container {
+  position: absolute;
+  z-index: -1;
+  width: 590px;
+  height: 300px;
+}
+.projects .projects-content .project-tile .project-description .desc-bg-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/home-assets/projects/description-container.png") no-repeat;
+  background-size: contain;
+  transform: rotate(5deg);
+  z-index: -1;
+}
+.projects .projects-content .project-tile .project-description .client-logo {
+  position: absolute;
+  left: 415px;
+  z-index: 1;
+}
+.projects .projects-content .project-tile .project-description p {
+  width: 400px;
+  padding: 5rem 0.5rem;
+}
+.projects .projects-content .project-tile.oea .project-picture .frame {
+  transform: scale(0.75) translate(-5rem, -3rem);
+}
+.projects .projects-content .project-tile.oea .project-picture .deco-img {
+  transform: scale(0.9) translate(-1rem, 26rem);
+}
+.projects .projects-content .project-tile.oea .project-picture .main-img {
+  transform: scale(0.85) translate(0.75rem, 1.5rem);
+  height: 440px;
+}
+.projects .projects-content .project-tile.oea .project-info {
+  top: 34px;
+}
+.projects .projects-content .project-tile.oea .project-text {
+  z-index: 1;
+}
+.projects .projects-content .project-tile.oea .project-text .text-bg-container {
+  left: -15px;
+  width: 549px;
+  height: 207px;
+  background: url("assets/home-assets/projects/oea/heading-container.png") no-repeat;
+  background-size: contain;
+}
+.projects .projects-content .project-tile.oea .project-text .underline {
+  position: absolute;
+  top: 8.5rem;
+  left: 12rem;
+  rotate: 5deg;
+}
+.projects .projects-content .project-tile.oea .project-text p {
+  transform: rotate(2deg) translate(2rem, 2.5rem);
+  text-align: center;
+  width: 29rem;
+}
+.projects .projects-content .project-tile.oea .project-description {
+  translate: -1rem 2rem;
+}
+.projects .projects-content .project-tile.oea .project-description .desc-bg-container {
+  left: -21px;
+}
+.projects .projects-content .project-tile.oea .project-description .desc-bg-container .client-logo {
+  top: 200px;
+}
+.projects .projects-content .project-tile.oea .project-description p {
+  width: 548px;
+  padding: 5rem 3.5rem;
+}
+.projects .projects-content .project-tile.mcssp {
+  margin-top: 9rem;
+}
+.projects .projects-content .project-tile.mcssp .project-picture {
+  margin-left: 4.5rem;
+  margin-right: -1rem;
+}
+.projects .projects-content .project-tile.mcssp .project-picture .deco-img {
+  transform: scale(0.9) translate(-10rem, 19rem);
+}
+.projects .projects-content .project-tile.mcssp .project-picture .main-img {
+  transform: scale(0.82) translate(-2rem, -0.25rem);
+}
+.projects .projects-content .project-tile.mcssp .project-info {
+  top: 59px;
+}
+.projects .projects-content .project-tile.mcssp .project-text .text-bg-container {
+  left: -175px;
+  top: -100px;
+  width: 715px;
+  height: 393px;
+  background: url("assets/home-assets/projects/mcssp/heading-container.png") no-repeat;
+  background-size: contain;
+}
+.projects .projects-content .project-tile.mcssp .project-text .text-bg-container::after {
+  content: "";
+  position: absolute;
+  width: 327px;
+  height: 146px;
+  background: url("assets/home-assets/projects/mcssp/flags.png") no-repeat;
+  background-size: contain;
+  transform: translate(13rem, -3.75rem);
+}
+.projects .projects-content .project-tile.mcssp .project-text .underline {
+  position: absolute;
+  height: 1.5rem;
+  top: 9rem;
+  left: 22rem;
+}
+.projects .projects-content .project-tile.mcssp .project-text p {
+  transform: rotate(-2deg);
+}
+.projects .projects-content .project-tile.mcssp .project-description .desc-bg-container {
+  left: -96px;
+}
+.projects .projects-content .project-tile.mcssp .project-description .desc-bg-container .client-logo {
+  top: 160px;
+}
+
+.about {
+  margin-top: -8rem;
+  position: relative;
+  z-index: 4;
+}
+.about .about-content {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 12rem;
+}
+.about .about-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(assets/background-patterns/sandpaper.png) repeat, #ffa047;
+  filter: contrast(1) brightness(0.85);
+  z-index: 0;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 72px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 72px);
+}
+.about .about-content > * {
+  position: relative;
+  z-index: 1;
+}
+.about .about-content .about-content-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.about .about-content .about-heading {
+  position: relative;
+  padding: 3.9rem 6.5rem;
+  background: url("assets/home-assets/about/a_little_about_me.png") no-repeat;
+  background-size: contain;
+}
+.about .about-content .about-heading .hand {
+  position: absolute;
+  left: -4rem;
+  top: -2rem;
+  transform: scale(0.7);
+}
+.about .about-content .about-heading h2 {
+  position: relative;
+  top: 1.4rem;
+}
+.about .about-content .about-heading .arrow {
+  position: absolute;
+  transform: rotate(-20deg) scale(0.7);
+  height: 4rem;
+  top: 4rem;
+  left: 22.5rem;
+}
+.about .about-content .about-heading .underline {
+  position: absolute;
+  height: 2.5rem;
+  top: 7rem;
+  left: 18rem;
+}
+.about .about-content .block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+  position: relative;
+}
+.about .about-content .block .block-text {
+  position: relative;
+  width: 52%;
+  font-size: 1.25rem;
+  z-index: 1;
+}
+.about .about-content .block .block-text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.585);
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.about .about-content .block .block-text p {
+  margin: 0;
+  line-height: 1.4;
+  color: #111111;
+  transform: rotate(-1deg);
+}
+.about .about-content .block .block-photos {
+  position: relative;
+  width: 48%;
+  height: 24rem;
+  z-index: 2;
+}
+.about .about-content .block .block-photos img {
+  position: absolute;
+  max-width: 280px;
+  height: auto;
+}
+.about .about-content .block .block-photos .photo {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.about .about-content .block .block-photos .photo:hover {
+  transform: scale(1.025) !important;
+}
+.about .about-content .block .block-photos .photo-1 {
+  margin-top: 8%;
+  left: 0;
+  z-index: 1;
+}
+.about .about-content .block .block-photos .photo-2 {
+  right: 0;
+  z-index: 1;
+}
+.about .about-content .block .block-photos .photo-3 {
+  bottom: 0;
+  right: 6%;
+  z-index: 3;
+  max-width: 220px;
+}
+.about .about-content .block-1 .block-text {
+  padding: 0 3rem 0 0;
+}
+.about .about-content .block-1 .block-text::before {
+  background-image: url("assets/home-assets/about/about block 1.png");
+  width: 1334px;
+  height: 562px;
+}
+.about .about-content .block-1 .block-photos .photo-3 {
+  transform: rotate(-3deg);
+}
+.about .about-content .block-2 {
+  margin-top: -3rem;
+  z-index: 0;
+}
+.about .about-content .block-2 .block-text {
+  padding: 0 4rem 0;
+}
+.about .about-content .block-2 .block-text::before {
+  background-image: url("assets/home-assets/about/about block 2.png");
+  width: 1394px;
+  height: 618px;
+}
+.about .about-content .block-2 .block-photos .photo-1 {
+  z-index: 2;
+}
+.about .about-content .block-2 .block-photos .photo-2 {
+  z-index: 1;
+}
+.about .about-content .block-2 .block-photos .photo-3 {
+  transform: rotate(3deg);
+}
+.about .about-content .block-3 .block-text {
+  padding: 0 3rem;
+  width: 49%;
+}
+.about .about-content .block-3 .block-text::before {
+  background-image: url("assets/home-assets/about/about block 3.png");
+  width: 1498px;
+  height: 590px;
+  transform: translate(-45%, -50%) scale(0.585);
+}
+.about .about-content .block-3 .block-text p {
+  max-width: none;
+}
+.about .about-content .block-3 .block-photos {
+  width: 54%;
+}
+.about .about-content .block-3 .block-photos .photo-1 {
+  margin-top: 0;
+}
+.about .about-content .block-3 .block-photos .photo-2 {
+  top: -25%;
+  right: 0;
+}
+.about .about-content .block-3 .block-photos .photo-3 {
+  bottom: 0;
+  left: 32%;
+  max-width: 250px;
+}/*# sourceMappingURL=home.css.map */

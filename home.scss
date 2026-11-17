@@ -1,0 +1,652 @@
+// Shared mixins & placeholders
+@use 'styles/mixins' as *;
+
+// SCSS Variables
+$hero-photo-h: 440px; 
+$hero-h: calc($hero-photo-h * 92 / 68.25);  
+$heart-size: calc($hero-photo-h * 21 / 68.25); 
+
+$text-color-dark-red: #672120;
+
+.hero {
+    position: relative; // needed so the absolutely-positioned children below
+                         // anchor to THIS box, not the viewport
+    background: url(assets/background-patterns/rice-paper-2.png) repeat, #bd8853;
+    height: $hero-h;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    .hero-bg-check {
+        position: absolute;
+        top: -12%;
+        left: -10%;
+        width: 94%;
+    }
+
+    .hero-bg-green {
+        position: absolute;
+        top: -62%;
+        left: -3%;
+        width: 106%;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: $content-max-width;  // <- the cap. Past this width, everything inside
+                            // stays put instead of drifting apart.
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding-top: 1.5rem;
+        padding-bottom: 0;
+
+        .hero-photo-column {
+            z-index: 1;
+            width: 50%;
+
+            .heart-top {
+                position: absolute;
+                top: $heart-size;  
+                left: 8%;           
+                z-index: 10;
+                height: $heart-size; // was 20vh
+                transform: scaleX(-1);
+            }
+
+            .hero-photo {
+                position: relative;
+                height: $hero-photo-h; // was 60vh
+                margin-left: -$heart-size;
+            }
+        }
+
+        .hero-text-column {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 50%;
+            padding-top: 3rem;
+            z-index: 1;
+            margin-left: 2%;
+
+            .hero-name-wrapper {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                .hero-name {
+                    width: 70%;
+                    min-width: 500px;
+                    transform: rotateZ(2deg);
+                    margin: 2%;
+                }
+            }
+
+            .hero-details {
+                padding-left: 3rem;
+
+                .hero-description {
+                    font-size: 2rem;
+                    padding-bottom: 1.5rem;
+                }
+
+                .hero-subtitle {
+                    font-size: 1.25rem;
+                }
+
+                .underline-1 {
+                    position: relative;
+                    aspect-ratio: 213/35;
+                    width: 9rem;
+                    top: -3.5rem;
+                    left: 8rem;
+                }
+
+                .underline-2 {
+                    position: relative;
+                    aspect-ratio: 87/19;
+                    width: 6rem;
+                    top: -6.5rem;
+                    left: 15rem;
+                }
+            }
+        }
+    }
+    .heart-bottom {
+        position: absolute;
+        bottom: 8%;
+        left: calc(50% - 20rem);
+        z-index: 4;
+        width: $heart-size;
+    }
+}
+
+.projects {
+    position: relative;
+    z-index: 3;
+    margin-top: -8rem;
+
+    .projects-content {
+        position: relative;
+        z-index: 3;
+        background-color: #ebe7dc;
+        padding-bottom: 12rem;
+        line-height: 1.5;
+
+        &::before {
+            @include sandpaper-texture($filter: contrast(1.2) brightness(1.05));
+        }
+
+        @include overlay-texture-container;
+
+        .projects-content-inner {
+            max-width: $content-max-width;
+            margin: 0 auto;
+        }
+
+        .projects-heading{
+            position: relative;
+            padding: 2.7rem 6.5rem;
+            background: url("assets/home-assets/projects/what_ive_built.png") no-repeat;
+            background-size: contain;
+            margin-left: 1rem;
+            @extend %heading-text;
+        }
+
+        .project-tile {
+            display: flex;
+            justify-content: center;
+            width: fit-content;
+            margin: 5rem auto 0 auto;
+            padding-bottom: 2rem;
+            text-decoration: none;
+            color: inherit;
+
+            .project-picture {
+                width: fit-content;
+                position: relative;
+
+                .frame {
+                    position: absolute;
+                    z-index: 1;
+                }
+
+                .deco-img {
+                    position: absolute;
+                    z-index: 2;
+                }
+
+                .main-img {
+                    object-fit: cover;
+                    width: 618px;
+                    height: 476px;
+                    object-position: top;
+                    position: relative;
+                    z-index: 0;
+                }
+            }
+
+            .project-info {
+                position: relative;
+                margin-right: 5rem;
+            }
+
+            .project-text {
+                @include text-graphic-overlay;
+                font-size: 2.25rem;
+                color: white;
+
+                .text-bg-container {
+                    position: absolute;
+                    z-index: -1;
+                }
+
+                p {
+                    width: 30rem;
+                }
+            }
+
+            .project-description {
+                @include text-graphic-overlay;
+                font-size: 1.5rem;
+
+                .desc-bg-container {
+                    position: absolute;
+                    z-index: -1;
+                    width: 590px;
+                    height: 300px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background: url('assets/home-assets/projects/description-container.png') no-repeat;
+                        background-size: contain;
+                        transform: rotate(5deg);
+                        z-index: -1;
+                    }
+                }
+
+                .client-logo {
+                    position: absolute;
+                    left: 415px;
+                    z-index: 1;
+                }
+
+                p {
+                    width: 400px;
+                    padding: 5rem 0.5rem;
+                }
+            }
+
+            // Project Specific Modifiers
+
+            &.oea {
+                .project-picture {
+                    .frame {
+                        transform: scale(0.75) translate(-5rem, -3rem);
+                    }
+
+                    .deco-img {
+                        transform: scale(0.9) translate(-1rem, 26rem);
+                    }
+
+                    .main-img {
+                        transform: scale(0.85) translate(0.75rem, 1.5rem);
+                        height: 440px;
+                    }
+                }
+
+                .project-info {
+                    top: 34px;
+                }
+
+                .project-text {
+                    z-index: 1;
+
+                    .text-bg-container {
+                        left: -15px;
+                        width: 549px;
+                        height: 207px;
+                        background: url('assets/home-assets/projects/oea/heading-container.png') no-repeat;
+                        background-size: contain;
+                    }
+
+                    .underline {
+                        position: absolute;
+                        top: 8.5rem;
+                        left: 12rem;
+                        rotate: 5deg;
+                    }
+
+                    p {
+                        transform: rotate(2deg) translate(2rem, 2.5rem);
+                        text-align: center;
+                        width: 29rem;
+                    }
+                }
+
+                .project-description {
+                    translate: -1rem 2rem;
+
+                    .desc-bg-container {
+                        left: -21px;
+
+                        .client-logo {
+                            top: 200px;
+                        }
+                    }
+
+                    p {
+                        width: 548px;
+                        padding: 5rem 3.5rem;
+                    }
+                }
+            }
+            // &.oea {
+            //     .project-picture {
+            //         margin-left: 4.5rem;
+            //         margin-right: -1rem;
+
+            //         .deco-img {
+            //             transform: scale(0.9) translate(-10rem, 19rem);
+            //         }
+
+            //         .main-img {
+            //             transform: scale(0.76) translate(-4.75rem, -3.25rem);
+            //         }
+            //     }
+
+            //     .project-info {
+            //         top: 59px;
+            //     }
+
+            //     .project-text {
+            //         .text-bg-container {
+            //             left: -175px;
+            //             top: -100px;
+            //             width: 715px;
+            //             height: 393px;
+            //             background: url('assets/home-assets/projects/oea/heading-container.png') no-repeat;
+            //             background-size: contain;
+            //         }
+
+            //         .underline {
+            //             position: absolute;
+            //             height: 1.5rem;
+            //             top: 9rem;
+            //             left: 22rem;
+            //         }
+
+            //         p {
+            //             transform: rotate(-2deg);
+            //         }
+            //     }
+
+            //     .project-description {
+            //         .desc-bg-container {
+            //             left: -96px;
+
+            //             .client-logo {
+            //                 top: 160px;
+            //             }
+            //         }
+            //     }
+            // }
+
+            &.mcssp {
+                margin-top: 9rem;
+
+                .project-picture {
+                    margin-left: 4.5rem;
+                    margin-right: -1rem;
+
+                    .deco-img {
+                        transform: scale(0.9) translate(-10rem, 19rem);
+                    }
+
+                    .main-img {
+                        transform: scale(0.82) translate(-2rem, -0.25rem);
+                    }
+                }
+
+                .project-info {
+                    top: 59px;
+                }
+
+                .project-text {
+                    .text-bg-container {
+                        left: -175px;
+                        top: -100px;
+                        width: 715px;
+                        height: 393px;
+                        background: url('assets/home-assets/projects/mcssp/heading-container.png') no-repeat;
+                        background-size: contain;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            width: 327px;
+                            height: 146px;
+                            background: url('assets/home-assets/projects/mcssp/flags.png') no-repeat;
+                            background-size: contain;
+                            transform: translate(13rem, -3.75rem);
+                        }
+                    }
+
+                    .underline {
+                        position: absolute;
+                        height: 1.5rem;
+                        top: 9rem;
+                        left: 22rem;
+                    }
+
+                    p {
+                        transform: rotate(-2deg);
+                    }
+                }
+
+                .project-description {
+                    .desc-bg-container {
+                        left: -96px;
+
+                        .client-logo {
+                            top: 160px;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
+
+.about {
+    margin-top: -8rem;
+    position: relative;
+    z-index: 4;
+
+    .about-content {
+        position: relative;
+        z-index: 3;
+        padding-bottom: 12rem;
+
+        &::before {
+            @include sandpaper-texture(#ffa047, contrast(1) brightness(0.85), 72px);
+        }
+
+        @include overlay-texture-container;
+
+        .about-content-inner {
+            max-width: $content-max-width;
+            margin: 0 auto;
+        }
+
+        .about-heading {
+            position: relative;
+            padding: 3.9rem 6.5rem;
+            background: url("assets/home-assets/about/a_little_about_me.png") no-repeat;
+            background-size: contain;
+            @extend %heading-text;
+
+            .hand {
+                position: absolute;
+                left: -4rem;
+                top: -2rem;
+                transform: scale(0.7);
+            }
+
+            h2 {
+                position: relative;
+                top: 1.4rem;
+            }
+
+            .arrow {
+                position: absolute;
+                transform: rotate(-20deg) scale(0.7);
+                height: 4rem;
+                top: 4rem;
+                left: 22.5rem;
+            }
+
+            .underline {
+                position: absolute;
+                height: 2.5rem;
+                top: 7rem;
+                left: 18rem;
+            }
+        }
+
+        .block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 3rem;
+            position: relative;
+
+            .block-text {
+                position: relative;
+                width: 52%;
+                font-size: 1.25rem;
+                z-index: 1; // Lower z-index for text
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.585);
+                    z-index: -1;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                }
+
+                p {
+                    margin: 0;
+                    line-height: 1.4;
+                    color: #111111;
+                    transform: rotate(-1deg);
+                }
+            }
+
+            .block-photos {
+                position: relative;
+                width: 48%;
+                height: 24rem;
+                z-index: 2;
+
+                img {
+                    position: absolute;
+                    max-width: 280px;
+                    height: auto;
+                }
+
+                .photo {
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.025) !important;
+                    }
+                }
+
+                .photo-1 {
+                    margin-top: 8%;
+                    left: 0;
+                    z-index: 1;
+                }
+
+                .photo-2 {
+                    right: 0;
+                    z-index: 1;
+                }
+
+                .photo-3 {
+                    bottom: 0;
+                    right: 6%;
+                    z-index: 3;
+                    max-width: 220px;
+                }
+            }
+        }
+
+        .block-1 {
+            .block-text {
+                padding: 0 3rem 0 0;
+
+                &::before {
+                    background-image: url('assets/home-assets/about/about block 1.png');
+                    width: 1334px;
+                    height: 562px;
+                }
+            }
+
+            .block-photos {
+                .photo-3 {
+                    transform: rotate(-3deg);
+                }
+            }
+        }
+
+        .block-2 {
+            margin-top: -3rem; // Less space behind block 1
+            z-index: 0;
+
+            .block-text {
+                padding: 0 4rem 0;
+
+                &::before {
+                    background-image: url('assets/home-assets/about/about block 2.png');
+                    width: 1394px;
+                    height: 618px;
+                }
+            }
+
+            .block-photos {
+                .photo-1 {
+                    z-index: 2; // Sit over photo 2
+                }
+
+                .photo-2 {
+                    z-index: 1;
+                }
+
+                .photo-3 {
+                    transform: rotate(3deg);
+                }
+            }
+        }
+
+        .block-3 {
+            .block-text {
+                padding: 0 3rem;
+                width: 49%;
+
+                &::before {
+                    background-image: url('assets/home-assets/about/about block 3.png');
+                    width: 1498px;
+                    height: 590px;
+                    transform: translate(-45%, -50%) scale(0.585);
+                }
+
+                p {
+                    max-width: none;
+                }
+            }
+
+            .block-photos {
+                width: 54%; // Increased width for photo container
+
+                .photo-1 {
+                    // Keyboard - middle left
+                    margin-top: 0;
+                }
+
+                .photo-2 {
+                    // NYPL - top right
+                    top: -25%;
+                    right: 0;
+                }
+
+                .photo-3 {
+                    // Liberty - centre bottom
+                    bottom: 0;
+                    left: 32%;
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+}

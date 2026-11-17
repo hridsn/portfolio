@@ -1,0 +1,96 @@
+// ── Shared Mixins & Placeholders ─────────────────────────────────────────────
+
+// Variables used by the mixins/placeholders
+$text-color-dark-red: #672120;
+$content-max-width: 1200px;
+
+@mixin sandpaper-texture($bg-color: null, $filter: null, $mask-height: null) {
+    content: "";
+    position: absolute;
+    inset: 0;
+    @if $bg-color {
+        background: url(assets/background-patterns/sandpaper.png) repeat, $bg-color;
+    } @else {
+        background-image: url('assets/background-patterns/sandpaper.png');
+        background-repeat: repeat;
+    }
+    @if $filter {
+        filter: $filter;
+    }
+    z-index: 0;
+    @if $mask-height {
+        mask-image: linear-gradient(to bottom, transparent 0%, black $mask-height);
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black $mask-height);
+    }
+}
+
+@mixin overlay-texture-container {
+    // make sure children sit above the pseudo-element
+    &>* {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@mixin text-graphic-overlay {
+    position: relative;
+
+    p {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+%heading-text {
+    h2 {
+        color: $text-color-dark-red;
+        font-size: 1.75rem;
+        font-weight: 500;
+
+        span {
+            color: black;
+        }
+    }
+}
+
+// Centers page content within a max-width container
+@mixin centered-page-content($max-width: $content-max-width, $padding: 2rem 3rem) {
+    max-width: $max-width;
+    width: 100vw;
+    margin: 0 auto;
+    padding: $padding;
+}
+
+// Styles a project-page title in the brand dark-red
+@mixin project-title($size: 3.5rem) {
+    font-size: $size;
+    margin-bottom: 1rem;
+    color: $text-color-dark-red;
+}
+
+// Torn paper divider mixin for section backgrounds
+@mixin torn-paper-background($bg-color, $bg-image) {
+    position: relative;
+    background: url(../assets/background-patterns/sandpaper.png) repeat, $bg-color;
+
+    &::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+        top: -5rem;
+        left: 0;
+        height: 8rem;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-image: $bg-image;
+        mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+        -webkit-mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+    }
+
+    div {
+        position: relative;
+        z-index: 2;
+    }
+}
+

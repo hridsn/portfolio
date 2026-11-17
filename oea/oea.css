@@ -1,0 +1,687 @@
+.action-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 2rem;
+  background: #A21603;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.action-btn:hover {
+  transform: translateY(-2px);
+}
+
+h1 {
+  font-size: 3.25rem;
+  margin-bottom: 1.75rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+h3, p.large {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+p.medium {
+  font-size: 1.125rem;
+}
+
+h6, .small {
+  font-size: 0.825rem;
+}
+
+p.medium, p.large {
+  margin: 1rem 0;
+}
+
+h2, h4, h5, .highlight-color {
+  color: #A21603;
+}
+
+.small-margin {
+  margin: 0.25rem 0 !important;
+}
+
+.project-hero img, .case-study img {
+  border-radius: 0.5rem;
+  border: 10px white solid;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.project-hero img.rotate, .case-study img.rotate {
+  transform: rotate(-3deg);
+}
+.project-hero img.no-border, .case-study img.no-border {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.project-hero-container,
+.meta-section,
+.case-study .section-container {
+  max-width: 1200px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+  width: 100%;
+}
+
+.project-hero-container {
+  padding: 5rem 0rem;
+}
+
+.project-hero {
+  background: url(../assets/background-patterns/rice-paper-2.png) repeat, #A21603;
+  position: relative;
+}
+.project-hero .project-hero-picture {
+  position: absolute;
+  z-index: 1;
+  width: 45vw;
+  max-width: 41rem;
+}
+.project-hero .title {
+  display: flex;
+  justify-content: end;
+  color: white;
+  padding: 3rem 0 3rem;
+}
+.project-hero .title .title-container {
+  width: 50%;
+  padding-left: 7rem;
+}
+
+.meta {
+  position: relative;
+  background: url(../assets/background-patterns/sandpaper.png) repeat, #F9E7E7;
+}
+.meta::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: -5rem;
+  left: 0;
+  height: 8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(../assets/mcssp/torn_paper_pink.png);
+  mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+}
+.meta div {
+  position: relative;
+  z-index: 2;
+}
+.meta {
+  padding-bottom: 4rem;
+}
+.meta .meta-section {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding: 2rem 0 28rem;
+}
+.meta .meta-container {
+  width: 50%;
+  padding-left: 7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.case-study {
+  position: relative;
+  z-index: 2;
+  margin-bottom: -8.75rem;
+}
+.case-study .section {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32rem;
+  margin-top: -26rem;
+}
+.case-study .section .section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+.case-study .section .section-container:has(img) > div:has(img) {
+  flex: 1 1 40%;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.case-study .section .section-container:has(img) > div:has(img) img {
+  max-width: 100%;
+  max-height: 22rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.case-study .section .section-container > div:not(:has(img)) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 56%;
+  flex: 0 1 56%;
+}
+.case-study .section .section-container:has(video) p.small {
+  text-align: center;
+}
+.case-study .section .section-container.bigger-image {
+  gap: 3rem;
+}
+.case-study .section .section-container.bigger-image > div:not(:has(img)) {
+  flex: 0 1 42%;
+  max-width: 42%;
+}
+.case-study .section .section-container.bigger-image > div:has(img) {
+  flex: 0 1 58%;
+  max-width: 58%;
+}
+.case-study .section .section-container.bigger-image > div:has(img) img {
+  max-height: unset;
+  width: 100%;
+  height: auto;
+}
+.case-study .section .numbered .title {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.case-study .section .numbered .title span {
+  font-size: 4rem;
+  color: #A21603;
+}
+.case-study .section .numbered .title h3 {
+  font-weight: inherit;
+}
+.case-study .section .numbered .description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.case-study .section .highlight {
+  min-height: 22rem;
+  align-items: center;
+}
+.case-study .section .highlight > div.text {
+  max-width: 30%;
+  flex: 0 1 30%;
+}
+.case-study .section .highlight > div:has(img) {
+  flex: 1 1 65% !important;
+  max-width: 65% !important;
+}
+.case-study .section .highlight > div:has(img) img {
+  max-height: 100% !important;
+}
+.case-study .section .stacked-highlight {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 2rem;
+  gap: 2.5rem;
+  padding-right: 1rem;
+}
+.case-study .section .stacked-highlight > div:not(:has(img)):not(:has(video)) {
+  max-width: 25%;
+  flex: 0 1 25%;
+}
+.case-study .section .stacked-highlight > div:not(:has(img)):not(:has(video)) .text-container {
+  height: 90vh;
+}
+.case-study .section .stacked-highlight > div:not(:has(img)):not(:has(video)) .text-container .text {
+  position: sticky !important;
+  align-self: flex-start;
+  top: 25%;
+  height: 20.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.case-study .section .stacked-highlight > div:not(:has(img)):not(:has(video)) .text-container .text .title {
+  margin-bottom: 1.5rem;
+}
+.case-study .section .stacked-highlight > div:not(:has(img)):not(:has(video)) .text-container .text .description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.case-study .section .stacked-highlight > div:not(:has(img)):not(:has(video)) .text-container .text .description > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.case-study .section .stacked-highlight > div:has(img), .case-study .section .stacked-highlight > div:has(video) {
+  flex: 1 1 82% !important;
+  max-width: 82% !important;
+  position: sticky !important;
+  top: 20%;
+  align-self: flex-start;
+}
+.case-study .section .stacked-highlight video, .case-study .section .stacked-highlight img {
+  width: 100%;
+  max-height: unset !important;
+  margin-bottom: 0 !important;
+  display: block;
+  transition: opacity 0.8s ease;
+  position: relative;
+}
+.case-study .section .stacked-highlight video:not(:first-child), .case-study .section .stacked-highlight img:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.case-study .section .stacked-highlight video:nth-child(1), .case-study .section .stacked-highlight img:nth-child(1) {
+  z-index: 9;
+}
+.case-study .section .stacked-highlight video:nth-child(2), .case-study .section .stacked-highlight img:nth-child(2) {
+  z-index: 8;
+}
+.case-study .section .stacked-highlight video:nth-child(3), .case-study .section .stacked-highlight img:nth-child(3) {
+  z-index: 7;
+}
+.case-study .section .stacked-highlight video:nth-child(4), .case-study .section .stacked-highlight img:nth-child(4) {
+  z-index: 6;
+}
+.case-study .section .stacked-highlight video:nth-child(5), .case-study .section .stacked-highlight img:nth-child(5) {
+  z-index: 5;
+}
+.case-study .section .stacked-highlight video:nth-child(6), .case-study .section .stacked-highlight img:nth-child(6) {
+  z-index: 4;
+}
+.case-study .section .stacked-highlight video:nth-child(7), .case-study .section .stacked-highlight img:nth-child(7) {
+  z-index: 3;
+}
+.case-study .section .stacked-highlight video:nth-child(8), .case-study .section .stacked-highlight img:nth-child(8) {
+  z-index: 2;
+}
+.case-study .section .stacked-highlight video:nth-child(9), .case-study .section .stacked-highlight img:nth-child(9) {
+  z-index: 1;
+}
+.case-study .section .stacked-highlight video:nth-child(10), .case-study .section .stacked-highlight img:nth-child(10) {
+  z-index: 0;
+}
+.case-study .section .stacked-highlight video.active, .case-study .section .stacked-highlight img.active {
+  opacity: 1;
+  z-index: 20;
+}
+.case-study .section .stacked-highlight .video-btn-wrapper {
+  opacity: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.5rem;
+  position: absolute !important;
+  top: 0;
+  z-index: 50 !important;
+  height: 100%;
+  width: 100%;
+}
+.case-study .section .stacked-highlight .image-wrapper {
+  position: relative;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.case-study .section .stacked-highlight .image-wrapper .image-btn-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 0.5rem;
+  z-index: 30;
+}
+.case-study .section:nth-child(odd) {
+  position: relative;
+  background: url(../assets/background-patterns/sandpaper.png) repeat, #ebdac9;
+}
+.case-study .section:nth-child(odd)::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: -5rem;
+  left: 0;
+  height: 8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(../assets/mcssp/torn_paper_cream.png);
+  mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+}
+.case-study .section:nth-child(odd) div {
+  position: relative;
+  z-index: 2;
+}
+.case-study .section:nth-child(even) {
+  position: relative;
+  background: url(../assets/background-patterns/sandpaper.png) repeat, #F9E7E7;
+}
+.case-study .section:nth-child(even)::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: -5rem;
+  left: 0;
+  height: 8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(../assets/mcssp/torn_paper_pink.png);
+  mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+}
+.case-study .section:nth-child(even) div {
+  position: relative;
+  z-index: 2;
+}
+.case-study .big-section:nth-of-type(odd) .section:nth-child(odd) {
+  position: relative;
+  background: url(../assets/background-patterns/sandpaper.png) repeat, #fcf6eb;
+}
+.case-study .big-section:nth-of-type(odd) .section:nth-child(odd)::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: -5rem;
+  left: 0;
+  height: 8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(../assets/mcssp/torn_paper_white.png);
+  mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+}
+.case-study .big-section:nth-of-type(odd) .section:nth-child(odd) div {
+  position: relative;
+  z-index: 2;
+}
+.case-study .big-section:nth-of-type(odd) .section:nth-child(even) {
+  position: relative;
+  background: url(../assets/background-patterns/sandpaper.png) repeat, #ebdac9;
+}
+.case-study .big-section:nth-of-type(odd) .section:nth-child(even)::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: -5rem;
+  left: 0;
+  height: 8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(../assets/mcssp/torn_paper_cream.png);
+  mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+}
+.case-study .big-section:nth-of-type(odd) .section:nth-child(even) div {
+  position: relative;
+  z-index: 2;
+}
+.case-study .big-section:nth-of-type(even) .section:nth-child(odd) {
+  position: relative;
+  background: url(../assets/background-patterns/sandpaper.png) repeat, #F9E7E7;
+}
+.case-study .big-section:nth-of-type(even) .section:nth-child(odd)::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: -5rem;
+  left: 0;
+  height: 8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(../assets/mcssp/torn_paper_pink.png);
+  mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+}
+.case-study .big-section:nth-of-type(even) .section:nth-child(odd) div {
+  position: relative;
+  z-index: 2;
+}
+.case-study .big-section:nth-of-type(even) .section:nth-child(even) {
+  position: relative;
+  background: url(../assets/background-patterns/sandpaper.png) repeat, #fcf6eb;
+}
+.case-study .big-section:nth-of-type(even) .section:nth-child(even)::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: -5rem;
+  left: 0;
+  height: 8rem;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url(../assets/mcssp/torn_paper_white.png);
+  mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 3rem);
+}
+.case-study .big-section:nth-of-type(even) .section:nth-child(even) div {
+  position: relative;
+  z-index: 2;
+}
+.case-study .section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.case-study .section.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.case-study .section-container,
+.case-study .stacked-highlight .text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.case-study .section-container h1, .case-study .section-container h2, .case-study .section-container h3, .case-study .section-container h4, .case-study .section-container h5, .case-study .section-container p, .case-study .section-container ul, .case-study .section-container ol, .case-study .section-container img, .case-study .section-container .action-btn,
+.case-study .stacked-highlight .text h1,
+.case-study .stacked-highlight .text h2,
+.case-study .stacked-highlight .text h3,
+.case-study .stacked-highlight .text h4,
+.case-study .stacked-highlight .text h5,
+.case-study .stacked-highlight .text p,
+.case-study .stacked-highlight .text ul,
+.case-study .stacked-highlight .text ol,
+.case-study .stacked-highlight .text img,
+.case-study .stacked-highlight .text .action-btn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out var(--delay, 0ms), transform 0.5s ease-out var(--delay, 0ms), color 0.2s ease-out calc(var(--delay, 0ms) + 500ms);
+}
+.case-study .section-container p.medium, .case-study .section-container p.large,
+.case-study .stacked-highlight .text p.medium,
+.case-study .stacked-highlight .text p.large {
+  color: #1a1a1a;
+}
+.case-study .section-container.revealed,
+.case-study .stacked-highlight .text.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.case-study .section-container.revealed h1, .case-study .section-container.revealed h2, .case-study .section-container.revealed h3, .case-study .section-container.revealed h4, .case-study .section-container.revealed h5, .case-study .section-container.revealed p, .case-study .section-container.revealed ul, .case-study .section-container.revealed ol, .case-study .section-container.revealed img, .case-study .section-container.revealed .action-btn,
+.case-study .stacked-highlight .text.revealed h1,
+.case-study .stacked-highlight .text.revealed h2,
+.case-study .stacked-highlight .text.revealed h3,
+.case-study .stacked-highlight .text.revealed h4,
+.case-study .stacked-highlight .text.revealed h5,
+.case-study .stacked-highlight .text.revealed p,
+.case-study .stacked-highlight .text.revealed ul,
+.case-study .stacked-highlight .text.revealed ol,
+.case-study .stacked-highlight .text.revealed img,
+.case-study .stacked-highlight .text.revealed .action-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.case-study .section-container.revealed p.medium:not(.not-highlight), .case-study .section-container.revealed p.large:not(.not-highlight),
+.case-study .stacked-highlight .text.revealed p.medium:not(.not-highlight),
+.case-study .stacked-highlight .text.revealed p.large:not(.not-highlight) {
+  color: #A21603;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-study .section-container,
+  .stacked-highlight .text,
+  p.large,
+  p.medium {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+.section-container.nav-audit {
+  align-items: flex-start !important;
+}
+.section-container.nav-audit > div:not(:has(img)) {
+  position: sticky !important;
+  top: 20%;
+  align-self: flex-start;
+}
+.section-container.nav-audit img {
+  max-height: unset !important;
+  width: 60%;
+  height: auto;
+}
+.section-container.affinity-mapping-hook > div:not(:has(img)) {
+  flex: 0 1 80% !important;
+  max-width: 80% !important;
+}
+
+.case-study .section .stacked-highlight.site-map > div:not(:has(img)):not(:has(video)) {
+  max-width: 34%;
+  flex: 0 1 34%;
+}
+.case-study .section .stacked-highlight.site-map > div:has(img) {
+  flex: 1 1 66% !important;
+  max-width: 66% !important;
+  top: 12%;
+}
+
+.case-study .section .section-container.home-scroll,
+.home-scroll {
+  align-items: flex-start !important;
+  gap: 2.5rem;
+  padding-top: 2rem;
+}
+.case-study .section .section-container.home-scroll .home-text-list,
+.home-scroll .home-text-list {
+  flex: 0 1 30% !important;
+  max-width: 30% !important;
+}
+.case-study .section .section-container.home-scroll .home-text-list .home-step,
+.home-scroll .home-text-list .home-step {
+  height: 90vh;
+}
+.case-study .section .section-container.home-scroll .home-text-list .home-step:not(:last-child),
+.home-scroll .home-text-list .home-step:not(:last-child) {
+  margin-bottom: 20vh;
+}
+.case-study .section .section-container.home-scroll .home-text-list .home-step:last-child,
+.home-scroll .home-text-list .home-step:last-child {
+  height: auto;
+  margin-bottom: 0;
+}
+.case-study .section .section-container.home-scroll .home-text-list .home-step:last-child .home-step-content,
+.home-scroll .home-text-list .home-step:last-child .home-step-content {
+  position: static !important;
+}
+.case-study .section .section-container.home-scroll .home-text-list .home-step .home-step-content,
+.home-scroll .home-text-list .home-step .home-step-content {
+  position: sticky !important;
+  top: 17%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.case-study .section .section-container.home-scroll .home-text-list .home-step h4,
+.home-scroll .home-text-list .home-step h4 {
+  margin-bottom: 1.25rem;
+}
+.case-study .section .section-container.home-scroll .home-text-list .home-step p,
+.home-scroll .home-text-list .home-step p {
+  margin-bottom: 0.75rem;
+}
+.case-study .section .section-container.home-scroll .home-text-list .home-step > div, .case-study .section .section-container.home-scroll .home-text-list .home-step .home-step-content > div,
+.home-scroll .home-text-list .home-step > div,
+.home-scroll .home-text-list .home-step .home-step-content > div {
+  margin: 0.5rem 0;
+}
+.case-study .section .section-container.home-scroll .home-text-list .home-step .step-btn-wrapper,
+.home-scroll .home-text-list .home-step .step-btn-wrapper {
+  margin-top: 1rem !important;
+  display: flex;
+  justify-content: flex-start;
+}
+.case-study .section .section-container.home-scroll .home-img-window,
+.home-scroll .home-img-window {
+  flex: 1 1 66% !important;
+  max-width: 66% !important;
+  position: sticky !important;
+  top: 17%;
+  align-self: flex-start !important;
+}
+.case-study .section .section-container.home-scroll .home-img-window img,
+.home-scroll .home-img-window img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0 !important;
+  max-height: unset !important;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  will-change: transform;
+}
+.case-study .section .section-container.home-scroll[data-step="0"] .home-img-window img,
+.home-scroll[data-step="0"] .home-img-window img {
+  transform: translateY(0%);
+}
+.case-study .section .section-container.home-scroll[data-step="1"] .home-img-window img,
+.home-scroll[data-step="1"] .home-img-window img {
+  transform: translateY(-22%);
+}
+.case-study .section .section-container.home-scroll[data-step="2"] .home-img-window img,
+.home-scroll[data-step="2"] .home-img-window img {
+  transform: translateY(-37%);
+}
+.case-study .section .section-container.home-scroll[data-step="3"] .home-img-window img,
+.home-scroll[data-step="3"] .home-img-window img {
+  transform: translateY(-11%);
+}/*# sourceMappingURL=oea.css.map */

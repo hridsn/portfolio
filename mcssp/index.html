@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MCSSP | Hridya Nadappattel</title>
+	<meta name="description"
+		content="Making a Digital Home for a Rural, Queer Community. Designing MCSSP's website, strengthening their digital presence within the LGBTQIA2S+ community.">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="MCSSP | Hridya Nadappattel">
+	<meta property="og:description"
+		content="Making a Digital Home for a Rural, Queer Community. Designing MCSSP's website, strengthening their digital presence within the LGBTQIA2S+ community.">
+	<meta property="og:url" content="https://www.hridsn.com/mcssp/">
+	<meta property="og:image" content="https://www.hridsn.com/assets/hridya.jpg">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="MCSSP | Hridya Nadappattel">
+	<meta name="twitter:description"
+		content="Making a Digital Home for a Rural, Queer Community. Designing MCSSP's website, strengthening their digital presence within the LGBTQIA2S+ community.">
+	<meta name="twitter:image" content="https://www.hridsn.com/assets/hridya.jpg">
+
+	<!-- favicon link -->
+	<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+	<link rel="icon" type="image/x-icon" href="../assets/favicons/favicon.ico">
+
+	<!-- font awesome icons library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- local stylesheets -->
+	<link rel="stylesheet" href="../styles/base.css">
+	<link rel="stylesheet" href="mcssp.css">
+
+	<!-- page transitions library -->
+	<script src="https://unpkg.com/swup@4"></script>
+	<script src="https://unpkg.com/@swup/scroll-plugin@4"></script>
+	<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+	<script src="../scripts/case-study.js"></script>
+	<script>
+		window.swup = new Swup({
+			plugins: [
+				new SwupScrollPlugin({
+					animateScroll: {
+						betweenPages: false,
+						samePageWithHash: true,
+						samePage: true
+					}
+				}),
+				new SwupHeadPlugin({
+					persistAssets: true,
+					awaitAssets: true
+				})
+			]
+		});
+	</script>
+</head>
+
+<body>
+	<!-- id="swup" to support page transitions -->
+	<main id="swup" class="transition-fade">
+		<div class="project-hero">
+			<div class="project-hero-container">
+				<img src="../assets/mcssp/hero_picture.png" alt=""
+					class="project-hero-picture">
+				<div class="title">
+					<div class="title-container">
+						<h1>Making a Digital Home for a Rural, Queer Community</h1>
+						<p>Redesigning MCSSP's website so an isolated rural queer community finally has somewhere to turn</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="meta highlight-color small">
+			<div class="meta-section">
+				<div class="meta-container">
+					<div class="team">
+						<h6>Team Members</h6>
+						<p>
+							Hridya Nadappattel <br>
+							Nikhil Shetty <br>
+							Radhika Balaji <br>
+							Zoë Zapata
+						</p>
+					</div>
+					<div class="responsibilities">
+						<h6>My Responsibilities</h6>
+						<p>
+							Client meetings <br>
+							User research <br>
+							Design and IA
+						</p>
+					</div>
+					<div class="timeline">
+						<h6>Timeline</h6>
+						<p>
+							3.5 months <br>
+							(Sep 2025 - Dec 2025)
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="case-study">
+			<!-- intro and mcssp pic -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>A Community That Needed a Louder Voice</h2>
+						<p><b>Mendocino County Safe Space Project(MCSSP)</b> is an LGBTQIA2S+ safe space connecting
+							people to resources and training organizations in Cultural Humility and queer-supportive practices.
+						</p>
+						<p>
+							When we were introduced to MCSSP, we were excited by the potential for their website to
+							become a true digital safe space.</p>
+
+						<p class="medium">
+							What we didn't anticipate was <b>how hard it would be to make a site that would impact many
+								queer lives</b>.
+						</p>
+						<a class="action-btn" href="#design">Jump to final design</a>
+					</div>
+					<div>
+						<img src="../assets/mcssp/mcssp.png" alt="MCSSP team members holding a banner at a Pride parade in Mendocino." class="rotate">
+						<p class="small">MCSSP marching at their first-ever Pride Parade.</p>
+					</div>
+				</div>
+			</div>
+			<!-- digital footprint and stuff -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>Trying to Comprehend MCSSP Work</h2>
+						<p>
+							I began <b>mapping where MCSSP's content actually lived</b> and found their website,
+							Facebook, Instagram, workshop pages, scholarship listings, donation portals.
+						</p>
+						<p>
+							Together, we audited this digital footprint, and the picture was fragmented:</p>
+						<ul>
+							<li>The <b>website had almost no content</b>.</li>
+							<li>Social media had <b>valuable resources and photos but not on the website</b>.</li>
+							<li>The <b>scholarship</b> existed online, but <b>was anyone finding it?</b></li>
+							<li>The <b>donation page</b> lived on a third-party platform, <b>buried in a Facebook
+									pin</b>.</li>
+						</ul>
+						<p>For people trying to find support in a moment of need, <b>such a scattered footprint becomes a serious barrier.</b></p>
+						<p class="large">
+							The gaps pointed to a bigger question: <br>
+							<b>If this was all we could find online, was this really everything MCSSP was doing for the community?</b>
+</p>
+
+					</div>
+					<div>
+						<img src="../assets/mcssp/mcssp_resources.png" alt="Collage of screenshots showing MCSSP's fragmented online presence across their website, Facebook page, Instagram, and a standalone scholarship page." class="no-border">
+						<p class="small">Screenshots of MCSSP's website, Facebook, Instagram, and scholarship page.</p>
+					</div>
+				</div>
+			</div>
+			<!-- calling with cynthia to understand what they actually did -->
+			<div class="section">
+				<div class="section-container" style="align-items: stretch;">
+					<div>
+						<h2>Finding MCSSP's Hidden Story</h2>
+						<p>
+							<b>We met with Cynthia, co-founder of MCSSP</b>, to understand what wasn't being represented
+							online. They shared grants, workshop outlines, board narratives, and we uncovered proof of a program far
+							bigger than what was said online:
+						</p>
+						<ul>
+							<li>A <b>mentorship</b> and <b>scholarship</b> provider.</li>
+							<li>A <b>community education</b> resource.</li>
+							<li>A point of connection for <b>isolated queer youth.</b></li>
+							<li><b>Support group</b> organizing.</li>
+							<li>MCSSP's <b>first-ever Pride Parade!!</b></li>
+						</ul>
+						<p><b>MCSSP online and MCSSP in real life were two different organizations.</b> One had almost no content. The other was mentoring students, educating the county, and marching in its first Pride parade.</p>
+						
+						<p class="large">
+							<b>MCSSP's work needed to be seen</b>. Now we needed to find out <b>how to close this gap</b>.
+						</p>
+					</div>
+					<div class="scope">
+						<p class="quote">"Outreach is important... online resources are sometimes the only resources people have. Rural people, people who might not be able to come around, or who aren't out yet, this might be all they get."
+							<br>
+							<span>- Cynthia (Co-Founder, MCSSP)</span>
+						</p>
+						<div>
+							<img src="../assets/mcssp/parade_cynthia_reyna.png" alt="Reyna speaking at a podium outside a community building, with Cynthia standing beside her." class="parade-cynthia-reyna">
+							<img src="../assets/mcssp/parade2.png" alt="A crowd marching with rainbow Pride flags down a street." class="parade">
+
+							<p class="small">Pictures of Reyna speaking at a community event, with Cynthia by her side, and MCSSP marching at their first-ever Pride Parade.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- interviewing and comp research -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>What does a Rural Queer Resource Hub Need?</h2>
+						<p>
+							To start our research we looked at <b>national and local resource hubs</b> and mainly found
+							<b>critical resources, support groups</b> and <b>representative queer media</b>.
+						</p>
+						<p>
+							Going in, we wanted to make the cutest, gayest site possible. Researching competitors also
+							helped us see how to <b>balance the fun with this serious information</b>.
+						</p>
+						<p>
+							What we were missing now was to <b>understand the resource hub Mendocino needed</b>. That's
+							when we turned to Cynthia to connect us with <b>real community members</b>:
+						</p>
+						<ul>
+							<li><b>Queer-affirming doctors and therapists</b> were nearly impossible to find.</li>
+							<li>Resources spread only by word-of-mouth. <b>No central, trustworthy source</b> existed.</li>
+							<li>Rural <b>queer youth felt culturally isolated</b> and unrepresented online.</li>
+						</ul>
+					</div>
+					<div>
+						<div style="width: 100%;">
+							<img src="../assets/mcssp/interview.png" alt="Screenshot from a video call with an MCSSP community member, alongside a quote about people's willingness to help.">
+							<p class="quote">
+								“A vast majority of people want to be nice to people. They want someone who is warmly open
+								to giving them resources and is approachable.”
+							</p>
+						</div>
+						<p class="small">An excerpt from one of my interviews with a community member.</p>
+					</div>
+				</div>
+				<div class="section-container">
+					<div class="w-75"><div>
+						<p class="medium">
+							We finally had so many insights to empower Mendocino. Every one felt too important to omit. And
+							the
+							weight
+							of it hit us:
+						</p>
+						<p class="large">
+							The impact this platform could have scared us. <b>We NEEDED to get it right.</b>
+						</p>
+					</div></div>
+				</div>
+			</div>
+			<!-- scribbling words and understand wtf we're doing -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>Making Sense of All That Research</h2>
+						<p>Seeing to what other communities had, what MCSSP was actually doing, and what Mendocino's
+							queer
+							community
+							wanted, the gaps were obvious. <b>We just didn't know what to do with it, and the growing
+								weight of
+								responsibility only made it harder to move</b>.</p>
+						<p>We decided to do something and started jotting down everything we'd uncovered and everything
+							we still
+							needed
+							to know, just so we could move ahead. </p>
+						<p class="medium">Somewhere between all the scribbling, we slowly connected <b>what needed to be
+								done</b>:
+						</p>
+					</div>
+					<div>
+						<img src="../assets/mcssp/strategic_direction_scribbling.png" alt="A handwritten scribble diagram connecting words like visibility, community, resources, impact, and engagement.">
+						<p class="small">Trying to put together our strategic direction by pulling all the words that surfaced in our research</p>
+					</div>
+				</div>
+			</div>
+			<!-- Strategic Direction -->
+			<div class="section">
+				<div class="section-container">
+					<div class="strategic-direction">
+						<div>
+							<p class="highlight-color">Design a website that</p>
+							<p class="large">
+								<b>makes MCSSP's impact visible</b> to <br>
+								<b>drive engagement, participation,</b> and <b>donation.</b>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- mobile justification -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>How to Make MCSSP More Visible?</h2>
+						<p>MCSSP needed to be more than a website. It had to meet people where they already were.</p>
+						<p>In a rural community, <b>phones are far more universal than laptops</b>, especially for queer
+							teens
+							who
+							might need to browse privately, and many were already finding MCSSP through Facebook's
+							mobile app.
+						</p>
+						<p><b>It also had to be fast</b>. Much of what MCSSP would be offering only helps if it's
+							reachable in
+							seconds.</p>
+						
+						<div>
+							<p class="large"><b>Mobile-first wasn't a design preference. It was how we'd make the resource
+									hub actually accessible.</b></p>
+							<p class="medium">But accessible only matters if people can find what they came for.</p>
+						</div>
+					</div>
+					<div>
+						<img src="../assets/mcssp/mobile.png" class="no-border" alt="Side-by-side comparison of MCSSP's website on mobile and desktop, showing the mobile layout prioritized for quick access.">
+						<p class="small">MCSSP's site designed mobile-first, since most visitors would be reaching it from a phone.</p>
+					</div>
+				</div>
+			</div>
+			<!-- first site map -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>Giving MCSSP's Story a Skeleton</h2>
+						<p>With the <b>flood of content that we had, we needed to make it findable</b>. It was clear
+							that we would need some major organization here, so that people could actually find information they needed on this site.</p>
+						<p>We went back to our interviews and competitor research, one pattern kept showing up: everything fell into one of two needs: 
+							people wanting to <b>understand MCSSP</b>, and people needing <b>help right now</b>.
+						</p>
+						<p class="medium"><b>So the site had to do two things:</b></p>
+					</div>
+				</div>
+				
+				<div class="stacked-highlight section-container">
+					<div>
+						<div class="text-container">
+							<div class="text">
+								<div class="title">
+									<h4><b>Make MCSSP's story public</b></h4>
+								</div>
+								<div class="description">
+									<p>Who We Are, What We Do, and Get Involved show the MCSSP's story, work, and
+							ways to help, <b>all in one place online for the first time</b>.</p>
+								</div>
+							</div>
+						</div>
+						<div class="text-container">
+							<div class="text">
+								<div class="title">
+									<h4><b>Give the community a much-needed resource hub</b></h4>
+								</div>
+								<div class="description">
+									<p>Find Support, Know the Rainbow, Events give resources and connection <b>at
+								the community's fingertips</b>.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="image-wrapper">
+							<img class="no-border" src="../assets/mcssp/initial_site_map.png" alt="">
+							<img class="no-border" src="../assets/mcssp/initial_site_map_mcssp.png" alt="">
+							<img class="no-border" src="../assets/mcssp/initial_site_map_community.png" alt="">
+							<img class="no-border" src="../assets/mcssp/initial_site_map.png" alt="">
+							<div class="image-btn-wrapper">
+								<button class="action-btn image-next-btn">Next <i class="fa-solid fa-arrow-down"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Our confusing with detail and queer being a slur -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>Challenge: Designing for a Sensitive Community</h2>
+						<p>With the structure in place, we moved into wireframes to "make MCSSP's story public" and
+							"give the
+							community a resource hub" into actual pages. As we worked, <b>two questions came up</b>:</p>
+					</div>
+				</div>
+				<div class="highlight numbered section-container">
+					<div class="text">
+						<div class="title">
+							<span>1.</span>
+							<h3>How <b>detailed should each section</b> be?</h3>
+						</div>
+						<div class="description">
+							<p>Interviews gave clear direction for pages like "Being Queer." </p>
+							<p>But no one knew how much MCSSP could even publish when it came to resources or programs.
+							</p>
+							<p class="large"><b>Some sections</b> ballooned to <b>four pages</b>. Others stayed <b>a
+									single, fun
+									page</b>.</p>
+						</div>
+					</div>
+					<div>
+						<img src="../assets/mcssp/resources_vs_being_queer.png"
+						alt="A dark moodboard showing four dense wireframe pages for Resources, next to a single wireframe page for Being Queer." class="no-border">
+						<p class="small">Without clear content expectations and scope, Resources expanded too much while Being Queer stayed minimal.</p>
+					</div>
+				</div>
+				<div class="highlight numbered section-container">
+					<div class="text">
+						<div class="title">
+							<span>2.</span>
+							<h3>Was our <b>language even right?</b></h3>
+						</div>
+						<div class="description">
+							<p>We realised our interviewees skewed younger. MCSSP's older community wasn't represented.
+							</p>
+							<p>Since "queer" showed up across our wireframes, we worried it might not land the same way
+								for them
+								as it would for younger users.</p>
+							<p class="large">We didn't know if <b>the word “queer” was a slur</b>, and we'd used it
+								everywhere.
+							</p>
+						</div>
+					</div>
+					<div>
+						<img src="../assets/mcssp/queer_problem.png"
+						alt="Multiple wireframe screens with the word 'queer' highlighted in pink across page titles and content." class="no-border">
+						<p class="small">The word 'queer' showed up everywhere in our wireframes.</p>
+					</div>
+				</div>
+			</div>
+			<!-- asking cynthia about all this -->
+			<div class="section">
+				<div class="section-container">
+					<h2>Rather Than Guess, We Brought It to Cynthia</h2>
+				</div>
+				<div class="section-container">
+					<div class="numbered">
+						<div class="title">
+							<span>1.</span>
+							<h3>How <b>detailed should each section</b> be?</h3>
+						</div>
+						<div class="description">
+							<p>While Cynthia didn't have an exact number, on the call, they <b>gave us an estimated
+									number of
+									resources and programs they'd verified</b>.</p>
+							<p>We worked with this estimate as <b>their team quickly pulled together an actual resource
+									list</b>
+								of what MCSSP could realistically publish.</p>
+							<p class="large"><b>They sent a real list. No more guessing.</b></p>
+						</div>
+					</div>
+					<div class="numbered">
+						<div class="title">
+							<span>2.</span>
+							<h3>Was our <b>language even right?</b></h3>
+						</div>
+						<div class="description">
+							<p><b>Cynthia wanted us to use "LGBTQIA2S+" in full, never shorthand</b>. As a safe space,
+								they had
+								to make sure not to unintentionally alienate older community members.</p>
+							<p>But that care didn't mean holding back visually; <b>they still wanted the site loud,
+									colorful,
+									and fun.</b></p>
+							<p class="large"><b>Careful with words, but still loud and colourful.</b></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="big-section" id="design">
+				<!-- intro to design -->
+				<div class="section">
+					<div class="section-container">
+						<div>
+						<h2>We Had Answers. Now We Had to Build</h2>
+						<p>With the structure and tone aligned with Cynthia, we began designing the website that would
+							bring
+							MCSSP's work, resources, and community presence online.</p>
+
+						</div>
+					</div>
+				</div>
+				<!-- branding -->
+				<div class="section">
+					<div class="section-container">
+						<div>
+							<h3>Brand Identity & Visual Language</h3>
+							<p>Vibrant, bold colors reflect pride and community. Made sure to be accessible across light
+								and dark
+								backgrounds.</p>
+							<p>
+
+								Headings originally used Lato in a heavier weight, <b>but I swapped in Kumbh Sans</b>
+								because its
+								rounded forms felt warmer and more approachable, while Lato stayed for body text where
+								readability
+								mattered most.</p>
+						</div>
+						<div>
+							<img src="../assets/mcssp/branding.png" alt="Brand style guide showing the MCSSP logo on light and dark backgrounds, a color palette, and typography specs for Kumbh Sans and Lato.">
+							<p class="small">MCSSP's new brand identity with logo, colors, and typography."</p>
+						</div>
+					</div>
+				</div>
+				<!-- home -->
+				<div class="section">
+					<div class="section-container">
+						<div>
+							<img src="../assets/mcssp/home.png" alt="The homepage screen in two screenshots showing MCSSP's mission, Pride event photos, testimonials, and support programs." class="no-border">
+							<p class="small">The final homepage with the perfect mix of welcoming, colorful, and community-first.</p>
+						</div>
+						<div>
+							<h3>Home</h3>
+							<p>The homepage had one job: <b>make people feel welcome the second they landed</b>. That
+								meant getting
+								the visuals and pathways right, which the team couldn't agree on.</p>
+							<p>When the layout stalled between two directions, <b>I suggested a quick mock-up to move
+									the
+									conversation forward</b>. From there, we refined it into the version that shipped:
+								vibrant
+								colors, real photography from Mendocino County, and clear pathways straight to services
+								and events.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- my section, resources -->
+				<div class="section">
+					<div class="section-container">
+						<div>
+						<h3>Resources & Support</h3>
+						<p>I focused on making resource discovery <b>clear and low-stress for people seeking
+								support</b>.</p>
+						</div>
+					</div>
+					<div class="stacked-highlight section-container">
+						<div>
+							<div class="text-container">
+								<div class="text">
+									<div class="title">
+										<h4>Clear resource discovery</h4>
+									</div>
+									<p><b>People searching for help are often stressed or in a hurry</b>. So resources are grouped by what
+										someone needs, not by internal categories. <br><br>
+										The categories use <b>supportive, personal language</b>,
+										and includes a dedicated <b>space for queer youth</b>.</p>
+								</div>
+							</div>
+							<div class="text-container">
+								<div class="text">
+									<div class="title">
+										<h4>Persistent support navigation</h4>
+									</div>
+									<p>Navigation stays visible throughout, so that <b>someone arriving in a moment of urgency
+											never loses track of where help is.</b></p>
+								</div>
+							</div>
+							<div class="text-container">
+								<div class="text">
+									<div class="title">
+										<h4>Suggest a Resource</h4>
+									</div>
+									<p><b>No single organization can keep up with every resource available</b>. So the site lets users <b>submit
+											resources</b> to MCSSP
+										that's not been listed yet. <br>This <b>will be reviewed by MCSSP</b> before anything goes live, keeping the
+										list both wider and trustworthy.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div>
+							<video src="../assets/mcssp/res_discovery.mp4" muted playsinline class="scroll-video"></video>
+							<video src="../assets/mcssp/res_persistent_nav.mp4" muted playsinline class="scroll-video"></video>
+							<video src="../assets/mcssp/res_suggest.mp4" muted playsinline class="scroll-video"></video>
+							<div id="video-btn-wrapper" class="video-btn-wrapper">
+								<button class="action-btn replay-btn"><i class="fa-solid fa-rotate-right"></i> Replay</button>
+								<button class="action-btn next-btn">Next <i class="fa-solid fa-arrow-down"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- other pages by teammates -->
+				<div class="section">
+					<div class="section-container">
+						<div>
+
+						<h3>Other Key Pages</h3>
+						<p>Designed collaboratively across the team.</p>
+						</div>
+					</div>
+					<div class="other-pages section-container">
+						<div>
+							<img src="../assets/mcssp/programs.png" class="no-border"
+								alt="Programs and services page detialing what MCSSP do">
+							<h5>Programs & Services</h5>
+							<p>An overview of MCSSP's workshops, community programs, and support initiatives to make clear what MCSSP actually does.</p>
+						</div>
+						<div>
+							<img src="../assets/mcssp/events.png" alt="Events page for the community to participate" class="no-border">
+							<h5>Events Calendar</h5>
+							<p>A shared calendar that surfaces events across Mendocino County so the community could see MCSSP in action, show up, and meet other queer folks and allies.</p>
+						</div>
+						<div>
+							<img src="../assets/mcssp/rainbow.png" class="no-border"
+								alt="Know the Rainbow page showing queer representation and vocabulary for allies">
+							<h5>Know the Rainbow</h5>
+							<p>A storytelling space celebrating queer joy through blogs, watchlists, and community
+								narratives, giving people a queer ABC guide, while celebrating representation in the community and in media.
+							</p>
+						</div>
+						<div>
+							<img src="../assets/mcssp/who_we_are.png" class="no-border"
+								alt="Who we are page to show MCSSP's board members and mission">
+							<h5>Who We Are</h5>
+							<p>Explains MCSSP's mission, service areas, and board members, highlighting community
+								impact and showing the faces behind the scene.
+							</p>
+						</div>
+						<div>
+							<img src="../assets/mcssp/donations.png" alt="Get Involved for volunteers and donations" class="no-border">
+							<h5>Get Involved</h5>
+							<p>A page encouraging volunteering and donations for the users to offer help, in whatever way someone could.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- questions about site map and findability -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>Did our designs really make sense?</h2>
+						<p>Before shipping, we wanted to make sure <b>people could actually find the highest-stakes
+								content</b>:
+							crisis support, core offerings, youth resources, and new sections we'd added based on
+							interviews and
+							competitive research.</p>
+						<p class="medium">We really <b>needed to know things worked before shipping</b>, so we ran a
+							tree test.
+							It revealed all the problems we were dreading:</p>
+					
+						<p>We soon found out the blind spots in our site:</p>
+						<ul>
+							<li>Users struggled to find the <b>scholarship</b>.
+							</li>
+							<li>Users got lost trying to locate <b>free workshops</b>.</li>
+							<li><b>Representation content</b> (queer film, book recs) was hard to find.</li>
+							<li><b>Ally learning materials</b> result were scattered across the site map.</li>
+						</ul>
+						<p class="large"><b>These weren't just navigation issues, they were barriers to real
+								support.</b></p>
+					</div>
+					<div>
+						<img src="../assets/mcssp/site_map_fixing.png" alt="Photo of a whiteboard with the MCSSP site map written out by hand — sections like Who We Are, Services, Find Support, Rainbow + You, Events, and Get Involved.">
+						<p class="small">The site map we sketched while testing and iterating it.</p>
+					</div>
+				</div>
+			</div>
+			<!-- tree testing issues and solutions -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>Choosing What to Fix</h2>
+						<p>Fixing all of this wasn't just about better labels. <b>We had to rethink what we'd built
+								without
+								impacting our completed work.</b> Not everything needed the same level of urgency, so we
+							made
+							three calls:</p>
+					</div>
+				</div>
+				<div class="stacked-highlight section-container">
+					<div>
+						<div class="text-container">
+							<div class="text numbered">
+								<div class="title">
+									<span>1.</span>
+									<h3><b>Stopped treating "wrong" as wrong.</b></h3>
+								</div>
+								<div class="description">
+									<p>We saw that in most of the “wrong” results, people kept landing in the same unintended
+										place.</p>
+									<p class="large">So <b>we cross-listed content in both locations</b> instead of fighting the
+										pattern.</p>
+								</div>
+							</div>
+						</div>
+						<div class="text-container">
+							<div class="text numbered">
+								<div class="title">
+									<span>2.</span>
+									<h3><b>Cut back on "gay and fun."</b></h3>
+								</div>
+								<div class="description">
+									<p>Many testers failed on the tasks that involved finding something in one of our fun menus. One tester even told us they couldn't tell what a section was actually for because of the
+										playful
+										language.</p>
+									<p class="large">So we <b>dialled back the fun</b>, since it was <b>making information
+											harder to
+											parse.</b></p>
+								</div>
+							</div>
+						</div>
+						<div class="text-container">
+							<div class="text numbered">
+								<div class="title">
+									<span>3.</span>
+									<h3><b>Left some things untouched</b></h3>
+								</div>
+								<div class="description">
+									<p>Representation content had a <b>67% failure rate in testing</b>, but we didn't feel it
+										was
+										important enough to need fixing.</p>
+									<p class="large">Unlike scholarship or crisis support, <b>it wasn't urgent enough to
+											prioritize</b>.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="image-wrapper">
+							<img class="no-border" src="../assets/mcssp/initial_site_map.png" alt="Initial Site map before the changes were made">
+							<img class="no-border" src="../assets/mcssp/site_map_1.png" alt="Sitemap diagram with green and blue highlighted branches showing content cross-listed under two different sections: Workshops and Training, Scholarships, and Youth Programs">
+							<img class="no-border" src="../assets/mcssp/site_map_2.png" alt="Sitemap diagram with orange highlighted branches marking the Services and Rainbow + You sections, where playful language was toned down.">
+							<img class="no-border" src="../assets/mcssp/site_map_3.png" alt="Sitemap diagram with an orange highlighted branch under Rainbow + You, showing the Joy in Pride subsection left unchanged, including Film and Book Recommendations, Blogs, and Positive Experiences in Mendocino.">
+							<img class="no-border" src="../assets/mcssp/site_map_final.png" alt="Final Site map with solutions from the tree tests">
+							<div class="image-btn-wrapper">
+								<button class="action-btn image-next-btn">Next <i class="fa-solid fa-arrow-down"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- final presentation -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>Final Design, Documentation, and Handoff</h2>
+						<p>With the structure finalized, we moved into high-fidelity design. After refining
+							interactions, hierarchy, and accessibility, and standardizing terminology across pages, we presented the
+							final designs to the MCSSP board. </p>
+						<div>
+							<p class="large"><b>The response was overwhelmingly positive!</b></p>
+							<p class="medium">Cynthia and the board said <b>they could finally see their mission clearly
+								represented in a digital space</b>. They were eager to begin building the site and asked for
+								guidance on implementation.</p>
+						</div>
+						<p><b>With no dedicated developer and a small, mostly volunteer team, MCSSP needed a platform their own staff could update</b>. 
+							We recommended platforms like Framer, WordPress, Webflow, and Lovable and weighing
+							their flexibility, and ease of maintenance, for a with limited technical resources.</p>
+					</div>
+				</div>
+			</div>
+			<!-- conclusion -->
+			<div class="section">
+				<div class="section-container">
+					<div>
+						<h2>Conclusion</h2>
+						<p>What began as a simple redesign quickly became something much bigger.</p>
+						<div>
+							<p><b>It became:</b></p>
+							<p class="medium"><b>
+								A visibility project. <br>
+								A safety project. <br>
+								A community project. <br>
+								A storytelling project.</b>
+							</p>
+						</div>
+						
+						<p>MCSSP was already doing meaningful work across Mendocino County, but much of it wasn't
+							visible
+							online. They inspired us to work hard to create a platform that could surface those
+							resources and
+							make them easier for people to find.</p>
+						<p>Seeing the board recognize their mission in the final designs was the most rewarding part of
+							the
+							project. <b>And I hope our designs are able to make life easy for queer people in Mendocino
+								and
+								anyone else who may stumble upon this site.</b></p>
+					</div>
+					<div>
+						<img src="../assets/mcssp/group_picture.png" alt="The design team standing in front of the title slide of their MCSSP website redesign presentation." class="rotate">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer" style="margin-top: 4rem;">
+			<div class="divider">
+				<img src="../assets/home-assets/footer/FooterDivider.png" alt="">
+			</div>
+
+			<div class="footer-content" style="padding: 2rem 0 4rem;">
+				<div class="footer-content-inner"
+					style="max-width: 1500px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+					<div class="say-hi">
+						<img src="../assets/home-assets/footer/Say-Hi.png" alt="">
+					</div>
+					<div class="invitation-container"
+						style="background: url('../assets/home-assets/footer/tapeBG.png') no-repeat; background-size: contain; padding: 1.5rem 2.5rem; display: flex; flex-direction: column; align-items: flex-end;">
+						<div class="invitation-text"
+							style="font-size: 1.25rem; color: #672120; transform: rotate(-2deg);">
+							Let's build something <br> together!
+						</div>
+						<div class="buttons" style="display: flex; margin: -1.5rem;">
+							<a href="#">
+								<img src="../assets/home-assets/footer/linkedin.png" alt="LinkedIn"
+									style="height: 60px;">
+							</a>
+							<a href="#">
+								<img src="../assets/home-assets/footer/email.png" alt="Email" style="height: 60px;">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright"
+				style="text-align: center; padding: 1.5rem 0; color: #9D6A47; background-color: #E2D4BA; font-size: 0.9rem; font-weight: 500;">
+				© 2026 Hridya Nadappattel
+			</div>
+		</footer>
+	</main>
+</body>
+
+</html>

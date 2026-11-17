@@ -2,134 +2,265 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hridya's Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon32.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hridya Nadappattel | UI Engineer Portfolio</title>
+	<meta name="description"
+		content="Hridya Nadappattel: UI Engineer with 3+ years crafting innovative, user-focused products and delightful digital experiences.">
 
-    <script src="https://unpkg.com/swup@4"></script>
-    <script>
-        const swup = new Swup();
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Hridya Nadappattel | UI Engineer Portfolio">
+	<meta property="og:description"
+		content="Hridya Nadappattel: UI Engineer with 3+ years crafting innovative, user-focused products and delightful digital experiences.">
+	<meta property="og:url" content="https://www.hridsn.com">
+	<meta property="og:image" content="https://www.hridsn.com/assets/hridya.jpg">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Hridya Nadappattel | UI Engineer Portfolio">
+	<meta name="twitter:description"
+		content="Hridya Nadappattel: UI Engineer with 3+ years crafting innovative, user-focused products and delightful digital experiences.">
+	<meta name="twitter:image" content="https://www.hridsn.com/assets/hridya.jpg">
+
+	<script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Hridya Nadappattel",
+            "image": "https://www.hridsn.com/assets/hridya.jpg",
+            "url": "https://www.hridsn.com",
+            "sameAs": [
+				"https://www.linkedin.com/in/hridsn",
+				"https://ixd.prattsi.org/author/hnadappa/",
+				"https://www.facebook.com/hridya.nadappattel/",
+				"https://www.weekday.works/people/hridya-nadappattel-hridsn",
+				"https://www.researchgate.net/profile/Hridya-Nadappattel",
+				"https://github.com/hridsn"
+			]
+        }
     </script>
+
+
+	<!-- favicon link -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+	<link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+
+	<!-- font awesome icons library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- local stylesheet -->
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="home.css">
+
+	<!-- page transitions library -->
+	<script src="https://unpkg.com/swup@4"></script>
+	<script src="https://unpkg.com/@swup/scroll-plugin@4"></script>
+	<script src="https://unpkg.com/@swup/head-plugin@2"></script>
+	<script src="scripts/case-study.js"></script>
+	<script>
+		window.swup = new Swup({
+			plugins: [
+				new SwupScrollPlugin({
+					animateScroll: {
+						betweenPages: false,
+						samePageWithHash: true,
+						samePage: true
+					}
+				}),
+				new SwupHeadPlugin({
+					persistAssets: true,
+					awaitAssets: true
+				})
+			]
+		});
+	</script>
 </head>
 
 <body>
-    <div id="swup" class="transition-fade">
-        <div class="home p-0">
-            <div class="intro info-container">
-                <div class="scroll">SCROLL <i class="fa-solid fa-chevron-right"></i><i class="fa-solid fa-chevron-right"></i><i class="fa-solid fa-chevron-right"></i></div>
-                <div class="col-8">
-                    <h1><img class="H" src="assets/logo2.png" alt="H">ridya here!</h1>
-                    Welcome to my portfolio. It's a couple of passion projects and some of my work throughout the years.
-                    <br><br><br>
-                    <a href="#projects" class="anchor-button position-relative rounded-pill start-0 top-0">
-                        Check out my work!
-                    </a>
-                    <br>
-                </div>
-            </div>
-            <div id="projects" style="font-size: 0px">.</div>
-            <div class="info-container projects">
-                <h2 class="ps-4 pt-5">Latest work</h2>
-                <div class="project-display"> 
-                    <div class="card-container">
-                        <a class="card" href="feedloc.html">
-                            <div class="image-container">
-                                <img src="assets/feedloc/card_display.png" alt="Feedloc cover">
-                            </div>
-                            <div class="project-description">
-                                <div>
-                                    <div class="desc-heading">Feedloc</div>
-                                    Food wastage solution for restaurants
-                                </div>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-container">
-                        <a class="card" href="tedx.html">
-                            <div style="background: rgb(0, 0, 0)" class="image-container">
-                                <img src="assets/tedx/card_display.png" alt="TEDxDTU cover">
-                            </div>
-                            <div class="project-description">
-                                <div>
-                                    <div class="desc-heading">TEDxDTU</div>
-                                    Event organisation and graphic design
-                                </div>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-container">
-                        <a class="card" href="train-your-brain.html">
-                            <div style="background: rgb(30, 35, 43)" class="image-container">
-                                <img src="assets/train-your-brain/card_display.png" alt="cover">
-                            </div>
-                            <div class="project-description">
-                                <div>
-                                    <div class="desc-heading">Train your Brain</div>
-                                    Exercise game for Alzheimer's patients
-                                </div>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-container">
-                        <a class="card" href="zen.html">
-                            <div style="background: rgb(14, 9, 49)" class="image-container">
-                                <img src="assets/zen/Dark_Mode.png" alt="cover">
-                            </div>
-                            <div class="project-description">
-                                <div>
-                                    <div class="desc-heading">Zen</div>
-                                    Project to encourage meditation
-                                </div>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card-container">
-                        <a class="card" href="almora.html">
-                            <div class="image-container">
-                                <img src="assets/almora/desktop.png" alt="cover">
-                            </div>
-                            <div class="project-description">
-                                <div>
-                                    <div class="desc-heading">Almora Brewery</div>
-                                    Freelance project for a café's webpage
-                                </div>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- <div>
-                <h6>A little about me</h6>
-                <div>
-                    I am software developer and have worked as a freelance designer focused in UI/UX design.
-                    <br><br>
-                    Through my journey with product design, I've seen how design has the power to speak to
-                    anyone without prejudice and this has inspired me to jump into the realm design.
-                </div>
-                <div style="font-size: 16px;" class="d-flex justify-content-between pt-4 text-primary">
-                        <a href="assets/Hridya Resume Coll.pdf" download>Résumé</a>
-                        hridyaneeta@gmail.com
-                    </div>
-            </div> -->
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+	<!-- id="swup" to support page transitions -->
+	<main id="swup" class="transition-fade">
+		<!-- for SEO -->
+		<h1 style="position: absolute; opacity: 0; height: 0; overflow: hidden;">
+			Hridya Nadappattel | UI Engineer Portfolio
+		</h1>
+
+		<div class="hero">
+			<div class="bg">
+				<img src="assets/home-assets/hero/bg_check.png" alt="" class="hero-bg-check">
+				<img src="assets/home-assets/hero/bg_green.png" alt="" class="hero-bg-green">
+			</div>
+			<div class="hero-content">
+				<div class="hero-photo-column">
+					<img src="assets/home-assets/hero/heart.png" alt="" class="heart-top">
+					<img src="assets/home-assets/hero/Hridya_photo.png" alt="a pic of me welcoming you to my world"
+						class="hero-photo">
+				</div>
+				<div class="hero-text-column">
+					<div class="hero-name-wrapper">
+						<img src="assets/home-assets/hero/Hridya_here.png" alt="Hridya" class="hero-name">
+					</div>
+
+					<div class="hero-details">
+						<div class="hero-description">I figure out what should happen.<br>
+							Then build it for real.</div>
+						<div class="hero-subtitle">
+							UX Designer &amp; Front-end Developer • 4+ years
+						</div>
+						<img src="assets/home-assets/hero/underline_1.png" alt="" class="underline-1">
+						<img src="assets/home-assets/hero/underline_2.png" alt="" class="underline-2">
+					</div>
+				</div>
+			</div>
+
+			<img src="assets/home-assets/hero/heart.png" alt="" class="heart-bottom">
+		</div>
+
+		<div class="projects">
+			<div class="divider">
+				<img src="assets/home-assets/HeroDivider.png" alt="">
+			</div>
+
+		<div class="projects-content">
+			<div class="projects-content-inner">
+				<div class="projects-heading">
+					<h2>What I've <span>Built</span></h2>
+				</div>
+
+				<a href="oea/" class="project-tile oea">
+					<div class="project-picture">
+						<img src="assets/home-assets/projects/oea/frame.png" alt="" class="frame">
+						<img src="assets/home-assets/projects/oea/airplane.png" alt="" class="deco-img">
+						<img src="assets/oea/home.png" alt="OEA's Home Page" class="main-img">
+					</div>
+					<div class="project-info">
+						<div class="project-text">
+							<div class="text-bg-container">
+								<img src="assets/home-assets/projects/oea/underline.png" alt="" class="underline">
+							</div>
+							<p>Building a Website from the Help Desk</p>
+						</div>
+						<div class="project-description">
+							<div class="desc-bg-container">
+								<img src="assets/home-assets/projects/oea/oea.png" alt="" class="client-logo">
+							</div>
+							<p>Planning, designing and building Pratt's education abroad website from the questions in the office inbox.</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="mcssp/" class="project-tile mcssp">
+					<div class="project-picture">
+						<img src="assets/home-assets/projects/mcssp/frame.png" alt="" class="frame">
+						<img src="assets/home-assets/projects/mcssp/pride-grandma.png" alt="" class="deco-img">
+						<img src="assets/mcssp/Resources.png" alt="MCSSP's Resource page" class="main-img">
+					</div>
+					<div class="project-info">
+						<div class="project-text">
+							<div class="text-bg-container">
+								<img src="assets/home-assets/projects/mcssp/underline.png" alt="" class="underline">
+							</div>
+							<p>Making a Digital Home for a Rural, Queer Community</p>
+						</div>
+						<div class="project-description">
+							<div class="desc-bg-container">
+								<img src="assets/home-assets/projects/mcssp/mcssp.png" alt="" class="client-logo">
+							</div>
+							<p>Redesigning MCSSP's website so an isolated rural queer community finally has somewhere to turn</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		</div>
+
+		<div class="about">
+
+			<div class="divider">
+				<img src="assets/home-assets/about/AboutDivider.png" alt="">
+			</div>
+
+			<div class="about-content">
+				<div class="about-content-inner">
+					<div class="about-heading">
+						<h2>A Little About <span>Me</span></h2>
+					</div>
+					
+					<div class="block block-1">
+						<div class="block-text">
+							<p>
+								I started as a software developer but realized I cared more about the 'why' and 'what' than just the 'how.' This
+								made me switch to UX and design, where I get to figure out what should happen, then build it for real.
+							</p>
+						</div>
+						<div class="block-photos">
+							<img src="assets/home-assets/about/headphones_cooper_hewitt.png" alt="Me listening to a bird sound exhibit in the Cooper Hewitt museum" class="photo photo-1">
+							<img src="assets/home-assets/about/AR_personal_assisstant.png" alt="Presenting my AR personal assitant squawkie" class="photo photo-2">
+						</div>
+					</div>
+					<div class="block block-2">
+						<div class="block-photos">
+							<img src="assets/home-assets/about/phone_rockefeller.png" alt="At an old pay phone in the Rockefeller Centre Subway" class="photo photo-1">
+							<img src="assets/home-assets/about/whiteboarding.png" alt="Very chaotic picture of me whiteboarding" class="photo photo-2">
+						</div>
+						<div class="block-text">
+							<p>
+								Right now, I've finished my MS in Information Experience Design at Pratt while working at their Office of Education Abroad, building websites and designing experiences that actually help people.
+							</p>
+						</div>
+					</div>
+					<div class="block block-3">
+						<div class="block-text">
+							<p>
+								When I'm not designing or coding, I'm playing the keyboard, reading sad books, never getting lost (seriously, I'm weirdly good with directions), and being generally goofy.
+							</p>
+						</div>
+						<div class="block-photos">
+							<img src="assets/home-assets/about/playing_keyboard.png" alt="Playing my keyboard" class="photo photo-1">
+							<img src="assets/home-assets/about/NYPL_with_map.png" alt="Figuring out directions in the NYPL" class="photo photo-2">
+							<img src="assets/home-assets/about/liberty_pointing.png" alt="Me with the Statue of Liberty" class="photo photo-3">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+
+			<div class="divider">
+				<img src="assets/home-assets/footer/FooterDivider.png" alt="">
+			</div>
+
+			<div class="footer-content">
+				<div class="footer-content-inner">
+					<div class="say-hi">
+						<img src="assets/home-assets/footer/Say-Hi.png" alt="">
+					</div>
+					<div class="invitation-container">
+						<div class="invitation-text">
+							Let's build something <br> together!
+						</div>
+						<div class="buttons">
+							<a href="#">
+								<img src="assets/home-assets/footer/linkedin.png" alt="LinkedIn">
+							</a>
+							<a href="#">
+								<img src="assets/home-assets/footer/email.png" alt="Email">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright">
+				© 2026 Hridya Nadappattel
+			</div>
+		</div>
+	</main>
 </body>
 
 </html>

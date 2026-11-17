@@ -1,0 +1,177 @@
+// Shared mixins & placeholders
+@use 'mixins' as *;
+
+//Import for Lexend
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &:hover::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+        background-color: #7d7d7d;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #a5a5a5;
+        transition: all .3s;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+body {
+    font-family: "Lexend", sans-serif;
+    color: #111111;
+    overflow-x: clip;
+    font-size: 0.925rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lexend", sans-serif;
+}
+
+//make responsive from here
+
+.divider {
+    width: 100%;
+
+    img {
+        margin-bottom: -5rem;
+        width: 100%;
+    }
+}
+
+
+.footer {
+    margin-top: -8rem;
+    position: relative;
+    z-index: 4;
+
+    .footer-content {
+        position: relative;
+        z-index: 3;
+        padding: 2rem 0 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::before {
+            @include sandpaper-texture(#fa6000, brightness(0.69) contrast(0.7), 40px);
+        }
+
+        @include overlay-texture-container;
+
+        .footer-content-inner {
+            max-width: $content-max-width;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .say-hi {
+            padding: 1rem 0;
+        }
+
+        .invitation-container {
+            background: url('../assets/home-assets/footer/tapeBG.png') no-repeat;
+            background-size: contain;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: fit-content;
+
+            .invitation-text {
+                font-size: 1.25rem;
+                line-height: 1.2;
+                text-align: left;
+                margin-bottom: 0.5rem;
+                color: $text-color-dark-red;
+                width: 100%;
+                transform: rotate(-2deg);
+            }
+
+            .buttons {
+                display: flex;
+                margin: -1.5rem;
+                
+                a img {
+                    height: 60px;
+                    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    
+                    &:hover {
+                        transform: scale(1.1) rotate(5deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 1.5rem 0;
+        color: #9D6A47;
+        background-color: #E2D4BA;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+}
+
+
+
+.transition-fade {
+    opacity: 1;
+    transform: translateX(0);
+    transform-origin: left;
+}
+
+html.is-changing .transition-fade {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+html.is-animating {
+    .transition-fade {
+        opacity: 0;
+    }
+
+    &.is-leaving .transition-fade {
+        transform: translateX(-3%);
+    }
+
+    &.is-rendering .transition-fade {
+        transform: translateX(3%);
+    }
+}
+
+[id] {
+    scroll-margin-top: 18vh;
+}
