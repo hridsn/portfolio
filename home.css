@@ -130,7 +130,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("assets/background-patterns/sandpaper.png");
+  background-image: url("../assets/background-patterns/sandpaper.png");
   background-repeat: repeat;
   filter: contrast(1.2) brightness(1.05);
   z-index: 0;
@@ -349,7 +349,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url(assets/background-patterns/sandpaper.png) repeat, #ffa047;
+  background: url(../assets/background-patterns/sandpaper.png) repeat, #ffa047;
   filter: contrast(1) brightness(0.85);
   z-index: 0;
   mask-image: linear-gradient(to bottom, transparent 0%, black 72px);

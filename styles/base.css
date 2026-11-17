@@ -70,7 +70,7 @@ h6 {
   content: "";
   position: absolute;
   inset: 0;
-  background: url(assets/background-patterns/sandpaper.png) repeat, #fa6000;
+  background: url(../assets/background-patterns/sandpaper.png) repeat, #fa6000;
   filter: brightness(0.69) contrast(0.7);
   z-index: 0;
   mask-image: linear-gradient(to bottom, transparent 0%, black 40px);
