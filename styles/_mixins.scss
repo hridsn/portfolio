@@ -9,9 +9,9 @@ $content-max-width: 1200px;
     position: absolute;
     inset: 0;
     @if $bg-color {
-        background: url(assets/background-patterns/sandpaper.png) repeat, $bg-color;
+        background: url(../assets/background-patterns/sandpaper.png) repeat, $bg-color;
     } @else {
-        background-image: url('assets/background-patterns/sandpaper.png');
+        background-image: url('../assets/background-patterns/sandpaper.png');
         background-repeat: repeat;
     }
     @if $filter {
