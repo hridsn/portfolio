@@ -146,8 +146,6 @@ h6 {
     }
 }
 
-
-
 .transition-fade {
     opacity: 1;
     transform: translateX(0);
@@ -173,5 +171,175 @@ html.is-animating {
 }
 
 [id] {
-    scroll-margin-top: 18vh;
+    scroll-margin-top: -2rem;
+}
+
+// ── Site Header & Sticky Navigation ───────────────────────────────────────────
+.site-header {
+    position: fixed;
+    right: 0;
+    z-index: 100;
+    pointer-events: none;
+
+    .site-nav {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        height: 5.5rem;
+        pointer-events: auto;
+        background: center / cover no-repeat url("../assets/header.png");
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 2rem;
+            padding: 0 2.5rem 1.5rem 8rem;
+            height: 100%;
+
+            .nav-link {
+                font-family: "Lexend", sans-serif;
+                font-size: 1rem;
+                font-weight: 600;
+                color: $text-color-dark-red;
+                text-decoration: none;
+                transition: transform 0.2s ease, opacity 0.2s ease;
+                
+                &:hover {
+                    transform: translateY(-1px);
+                    opacity: 0.85;
+                }
+            }
+
+            .resume-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.5rem 1.4rem;
+                background-color: $text-color-dark-red;
+                border-radius: 50%;
+                transform: rotate(-4deg);
+                transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+
+                .resume-btn-text {
+                    color: #ebe7dc;
+                    font-size: 0.95rem;
+                }
+
+                &:hover {
+                    transform: rotate(0deg) scale(1.05);
+                    opacity: 1;
+                    box-shadow: 0 2px 8px rgba(103, 33, 32, 0.25);
+                }
+            }
+        }
+    }
+}
+
+// ── Page Load Overlay ─────────────────────────────────────────────────────────
+// The overlay is visible via pure CSS from byte one — JS only ever removes it.
+// Drop heart-1.png, heart-2.png, heart-3.png and favicon.png into assets/loader/
+
+#page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background: #fdf7ef;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    pointer-events: all;
+
+    &.loader-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+// Stage is the positioning reference for the loose heart cluster + favicon
+.loader-stage {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+// ── Hearts ────────────────────────────────────────────────────────────────────
+.loader-heart {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+    will-change: transform, opacity;
+    animation: heart-pop-in-out 3s ease-in-out infinite;
+    animation-fill-mode: backwards; // holds first keyframe during delay
+}
+
+// Staggered positions mimicking the loose hero cluster
+.lh-1 {
+    width: 38px;
+    top: 8px;
+    left: 12px;
+    animation-delay: 0s;
+}
+
+.lh-2 {
+    width: 44px;
+    top: 32px;
+    right: 10px;
+    animation-delay: 0.15s;
+}
+
+.lh-3 {
+    width: 34px;
+    bottom: 0;
+    left: 26px;
+    animation-delay: 0.3s;
+}
+
+// ── Favicon ───────────────────────────────────────────────────────────────────
+.loader-favicon {
+    position: absolute;
+    width: 64px;
+    top: calc(50% - 32px);
+    left: calc(50% - 32px);
+    opacity: 0;
+    transform: scale(0);
+    will-change: transform, opacity;
+    animation: favicon-pop-in-out 3s ease-in-out infinite;
+}
+
+// ── Loading text ──────────────────────────────────────────────────────────────
+.loader-text {
+    font-family: "Lexend", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #9D6A47;
+    letter-spacing: 0.08em;
+}
+
+// ── Keyframes ─────────────────────────────────────────────────────────────────
+// 3s cycle:
+//   0–43%  (~0–1.3s) hearts pop in → hold → spin out
+//   42–86% (~1.3–2.6s) favicon pops in → holds → spins out
+//   86–100% (~2.6–3s) pause before repeat
+
+@keyframes heart-pop-in-out {
+    0%   { opacity: 0; transform: scale(0); }
+    10%  { opacity: 1; transform: scale(1.2); }  // overshoot pop
+    17%  { transform: scale(1); }                 // settle
+    33%  { opacity: 1; transform: scale(1); }     // hold
+    43%  { opacity: 0; transform: scale(0) rotate(360deg); } // spin out
+    100% { opacity: 0; transform: scale(0); }     // invisible during favicon + pause
+}
+
+@keyframes favicon-pop-in-out {
+    0%, 42% { opacity: 0; transform: scale(0); }
+    52%     { opacity: 1; transform: scale(1.2); }  // overshoot pop
+    59%     { transform: scale(1); }                 // settle
+    76%     { opacity: 1; transform: scale(1); }     // hold
+    86%     { opacity: 0; transform: scale(0) rotate(-360deg); } // spin out (opposite dir)
+    100%    { opacity: 0; transform: scale(0); }
 }

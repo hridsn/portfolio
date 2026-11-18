@@ -675,13 +675,13 @@ h2, h4, h5, .highlight-color {
 }
 .case-study .section .section-container.home-scroll[data-step="1"] .home-img-window img,
 .home-scroll[data-step="1"] .home-img-window img {
-  transform: translateY(-22%);
+  transform: translateY(-20%);
 }
 .case-study .section .section-container.home-scroll[data-step="2"] .home-img-window img,
 .home-scroll[data-step="2"] .home-img-window img {
-  transform: translateY(-37%);
+  transform: translateY(-23%);
 }
 .case-study .section .section-container.home-scroll[data-step="3"] .home-img-window img,
 .home-scroll[data-step="3"] .home-img-window img {
-  transform: translateY(-11%);
+  transform: translateY(0%);
 }/*# sourceMappingURL=oea.css.map */

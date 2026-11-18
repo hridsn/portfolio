@@ -153,5 +153,184 @@ html.is-animating.is-rendering .transition-fade {
 }
 
 [id] {
-  scroll-margin-top: 18vh;
+  scroll-margin-top: -2rem;
+}
+
+.site-header {
+  position: fixed;
+  right: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+.site-header .site-nav {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 5.5rem;
+  pointer-events: auto;
+  background: center/cover no-repeat url("../assets/header.png");
+}
+.site-header .site-nav .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 0 2.5rem 1.5rem 8rem;
+  height: 100%;
+}
+.site-header .site-nav .nav-links .nav-link {
+  font-family: "Lexend", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #672120;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.site-header .site-nav .nav-links .nav-link:hover {
+  transform: translateY(-1px);
+  opacity: 0.85;
+}
+.site-header .site-nav .nav-links .resume-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.4rem;
+  background-color: #672120;
+  border-radius: 50%;
+  transform: rotate(-4deg);
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.site-header .site-nav .nav-links .resume-btn .resume-btn-text {
+  color: #ebe7dc;
+  font-size: 0.95rem;
+}
+.site-header .site-nav .nav-links .resume-btn:hover {
+  transform: rotate(0deg) scale(1.05);
+  opacity: 1;
+  box-shadow: 0 2px 8px rgba(103, 33, 32, 0.25);
+}
+
+#page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: #fdf7ef;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  pointer-events: all;
+}
+#page-loader.loader-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-stage {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.loader-heart {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0);
+  will-change: transform, opacity;
+  animation: heart-pop-in-out 3s ease-in-out infinite;
+  animation-fill-mode: backwards;
+}
+
+.lh-1 {
+  width: 38px;
+  top: 8px;
+  left: 12px;
+  animation-delay: 0s;
+}
+
+.lh-2 {
+  width: 44px;
+  top: 32px;
+  right: 10px;
+  animation-delay: 0.15s;
+}
+
+.lh-3 {
+  width: 34px;
+  bottom: 0;
+  left: 26px;
+  animation-delay: 0.3s;
+}
+
+.loader-favicon {
+  position: absolute;
+  width: 64px;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+  opacity: 0;
+  transform: scale(0);
+  will-change: transform, opacity;
+  animation: favicon-pop-in-out 3s ease-in-out infinite;
+}
+
+.loader-text {
+  font-family: "Lexend", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #9D6A47;
+  letter-spacing: 0.08em;
+}
+
+@keyframes heart-pop-in-out {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  17% {
+    transform: scale(1);
+  }
+  33% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  43% {
+    opacity: 0;
+    transform: scale(0) rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes favicon-pop-in-out {
+  0%, 42% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  52% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  59% {
+    transform: scale(1);
+  }
+  76% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  86% {
+    opacity: 0;
+    transform: scale(0) rotate(-360deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
 }/*# sourceMappingURL=base.css.map */

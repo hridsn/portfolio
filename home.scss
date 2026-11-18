@@ -117,7 +117,7 @@ $text-color-dark-red: #672120;
                     position: relative;
                     aspect-ratio: 87/19;
                     width: 6rem;
-                    top: -6.5rem;
+                    top: -6rem;
                     left: 15rem;
                 }
             }
@@ -165,17 +165,21 @@ $text-color-dark-red: #672120;
         }
 
         .project-tile {
+            position: relative;
             display: flex;
             justify-content: center;
             width: fit-content;
-            margin: 5rem auto 0 auto;
+            margin: 2rem auto 0 auto;
             padding-bottom: 2rem;
             text-decoration: none;
             color: inherit;
+            cursor: pointer;
 
             .project-picture {
                 width: fit-content;
                 position: relative;
+                z-index: 2;
+                transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 
                 .frame {
                     position: absolute;
@@ -185,6 +189,7 @@ $text-color-dark-red: #672120;
                 .deco-img {
                     position: absolute;
                     z-index: 2;
+                    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
                 }
 
                 .main-img {
@@ -199,7 +204,35 @@ $text-color-dark-red: #672120;
 
             .project-info {
                 position: relative;
+                z-index: 1;
                 margin-right: 5rem;
+                transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            }
+
+            // Scrapbook multi-element hover:
+            // .project-picture sits on top of .project-info
+            &:hover {
+                z-index: 10;
+
+                .project-picture {
+                    transform: translateY(-6px) rotate(-1.5deg) scale(1.015);
+                }
+
+                .project-info {
+                    transform: translateY(-4px) rotate(1deg);
+                }
+            }
+
+            &.oea:hover {
+                .project-picture .deco-img {
+                    transform: scale(0.9) translate(-0.5rem, 25.5rem) rotate(-6deg);
+                }
+            }
+
+            &.mcssp:hover {
+                .project-picture .deco-img {
+                    transform: scale(0.95) translate(-9.8rem, 18.5rem) rotate(5deg);
+                }
             }
 
             .project-text {

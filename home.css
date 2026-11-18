@@ -103,7 +103,7 @@
   position: relative;
   aspect-ratio: 87/19;
   width: 6rem;
-  top: -6.5rem;
+  top: -6rem;
   left: 15rem;
 }
 .hero .heart-bottom {
@@ -151,19 +151,23 @@
   margin-left: 1rem;
 }
 .projects .projects-content .project-tile {
+  position: relative;
   display: flex;
   justify-content: center;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 5rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   padding-bottom: 2rem;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 .projects .projects-content .project-tile .project-picture {
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .projects .projects-content .project-tile .project-picture .frame {
   position: absolute;
@@ -172,6 +176,7 @@
 .projects .projects-content .project-tile .project-picture .deco-img {
   position: absolute;
   z-index: 2;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .projects .projects-content .project-tile .project-picture .main-img {
   -o-object-fit: cover;
@@ -185,7 +190,24 @@
 }
 .projects .projects-content .project-tile .project-info {
   position: relative;
+  z-index: 1;
   margin-right: 5rem;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.projects .projects-content .project-tile:hover {
+  z-index: 10;
+}
+.projects .projects-content .project-tile:hover .project-picture {
+  transform: translateY(-6px) rotate(-1.5deg) scale(1.015);
+}
+.projects .projects-content .project-tile:hover .project-info {
+  transform: translateY(-4px) rotate(1deg);
+}
+.projects .projects-content .project-tile.oea:hover .project-picture .deco-img {
+  transform: scale(0.9) translate(-0.5rem, 25.5rem) rotate(-6deg);
+}
+.projects .projects-content .project-tile.mcssp:hover .project-picture .deco-img {
+  transform: scale(0.95) translate(-9.8rem, 18.5rem) rotate(5deg);
 }
 .projects .projects-content .project-tile .project-text {
   position: relative;
