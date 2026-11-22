@@ -23,13 +23,13 @@
 }
 .hero .hero-bg-check {
   position: absolute;
-  top: -1rem;
+  bottom: 4rem;
   left: -5rem;
   width: 94%;
 }
 .hero .hero-bg-green {
   position: absolute;
-  bottom: -3rem;
+  bottom: 16rem;
   left: -2rem;
   width: 106%;
 }
