@@ -671,17 +671,17 @@ h2, h4, h5, .highlight-color {
 }
 .case-study .section .section-container.home-scroll[data-step="0"] .home-img-window img,
 .home-scroll[data-step="0"] .home-img-window img {
-  transform: translateY(0%);
+  transform: translateY(0);
 }
 .case-study .section .section-container.home-scroll[data-step="1"] .home-img-window img,
 .home-scroll[data-step="1"] .home-img-window img {
-  transform: translateY(-20%);
+  transform: translateY(-22rem);
 }
 .case-study .section .section-container.home-scroll[data-step="2"] .home-img-window img,
 .home-scroll[data-step="2"] .home-img-window img {
-  transform: translateY(-23%);
+  transform: translateY(-36rem);
 }
 .case-study .section .section-container.home-scroll[data-step="3"] .home-img-window img,
 .home-scroll[data-step="3"] .home-img-window img {
-  transform: translateY(0%);
+  transform: translateY(0rem);
 }/*# sourceMappingURL=oea.css.map */
